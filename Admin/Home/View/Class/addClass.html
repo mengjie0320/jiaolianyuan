@@ -1,0 +1,306 @@
+﻿<layout name='layout' />
+<ul class="breadcrumb">
+  <li>
+    <i class="icon-home home-icon"></i>
+    <a href="__MODULE__/Class/index">首页</a></li>
+  <li>
+    <a href="__MODULE__/Class/index">班级管理</a></li>
+  <li class="active">添加班级</li></ul>
+<!-- .breadcrumb -->
+<div class="nav-search" id="nav-search">
+  <form class="form-search">
+    <span class="input-icon">
+      <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+      <i class="icon-search nav-search-icon"></i>
+    </span>
+  </form>
+</div>
+<!-- #nav-search --></div>
+<!-- /.page-header -->
+<div class="col-xs-12" style="margin-top:30px;">
+  <!-- PAGE CONTENT BEGINS -->
+  <script>window.onload = function() {
+      //if($('#stuName').length>0){alert('123')}else{alert('456')};
+      $(":radio").click(function() {
+        var id = $(this).val();
+        $.post("checkProject", {
+          'id': id //前一个username需要跟UserModel对应，即跟数据库字段对应
+        },
+        function(data) {
+          $("#mess8").empty();
+          for (var i = 0,
+          l = data.length; i < l; i++) {
+            for (var key in data[i]) {
+              //alert(key+':'+data[i][key]);
+              //$("#mess8").html('');
+              $("#mess8").append('<input type="checkbox" id="checkbox" name="project[]" id="project" value="' + data[i][key] + '"/>' + data[i][key] + '　');
+              //alert($("#project"));
+            }
+          }
+        })
+      });
+
+      $('#classNo').blur(function() {
+        var classNo = $(this).val();
+        $.post("checkNo", {
+          'classNo': classNo //前一个username需要跟UserModel对应，即跟数据库字段对应
+        },
+        function(data) {
+          $('#tooltip2').attr('style', 'color:red');
+          $('#mess2').html(data);
+        }) return false;
+
+      });
+
+      $('#className').blur(function() {
+        var className = $(this).val();
+        $.post("checkName", {
+          'className': className //前一个username需要跟UserModel对应，即跟数据库字段对应
+        },
+        function(data) {
+          $('#tooltip3').attr('style', 'color:red');
+          $('#mess3').html(data);
+        }) return false;
+
+      });
+
+      $('#classNo').blur(function() {
+        var classNo = $(this).val();
+        if (classNo == "") {
+          $('#mess2').html("班号不能为空！");
+        } else {
+          $('#mess2').html("");
+        }
+      });
+      $('#className').blur(function() {
+        var className = $(this).val();
+        if (className == "") {
+          $('#mess3').html("班级名称不能为空！");
+        } else {
+          $('#mess3').html("");
+        }
+      });
+      $('#classPrice').blur(function() {
+        var classPrice = $(this).val();
+        if (classPrice == "") {
+          $('#mess4').html("班级价格不能为空！");
+        } else {
+          $('#mess4').html("");
+        }
+      });
+      $('#startTime').blur(function() {
+        var startTime = $(this).val();
+        if (startTime == "") {
+          $('#mess5').html("开班时间不能为空！");
+        } else {
+          $('#mess5').html("");
+        }
+      });
+      $('#avePeriod').blur(function() {
+        var avePeriod = $(this).val();
+        if (avePeriod == "") {
+          $('#mess6').html("平均周期不能为空！");
+        } else {
+          $('#mess6').html("");
+        }
+      });
+
+      $('#coachMinPrice').blur(function() {
+        var coachMinPrice = $(this).val();
+        if (coachMinPrice == "") {
+          $('#mess10').html("最低咨询费不能为空！");
+        } else {
+          $('#mess10').html("");
+        }
+      });
+
+      $('#coachMaxPrice').blur(function() {
+        var coachMaxPrice = $(this).val();
+        if (coachMaxPrice == "") {
+          $('#mess11').html("最高咨询费不能为空！");
+        } else {
+          $('#mess11').html("");
+        }
+      });
+
+      $('#classIntro').blur(function() {
+        var classIntro = $(this).val();
+        if (classIntro == "") {
+          $('#mess7').html("班级简介不能为空！");
+        } else {
+          $('#mess7').html("");
+        }
+      });
+
+      $('#submit1').click(function() {
+        if ($('#classCate').val() == '') {
+
+          alert($('#classCate').val());
+          return false;
+        }
+
+        if ($('#mess2').html() == '班号已存在！') {
+
+          return false;
+        }
+
+        if ($('#mess3').html() == '班级名称已存在！') {
+
+          return false;
+        }
+
+        var reg = /^\d{4}$/;
+        var str = $('#classNo').val();
+
+        if (!reg.test(str)) {
+          $('#mess2').html("班号不合法,请输4位数字！");
+          return false;
+        }
+
+        if ($('#classNo').val() == '') {
+          $('#mess2').html("班号不能为空!");
+          return false;
+        }
+
+        if ($('#className').val() == '') {
+          $('#mess3').html("班级名称不能为空!");
+          return false;
+        }
+        if ($('#classPrice').val() == '') {
+          $('#mess4').html("班级价格不能为空!");
+          return false;
+        }
+
+        if ($('#startTime').val() == '') {
+          $('#mess5').html("开班时间不能为空!");
+          return false;
+        }
+
+        if ($('#avePeriod').val() == '') {
+          $('#mess6').html("平均周期不能为空!");
+          return false;
+        }
+
+        if ($('#classIntro').val() == '') {
+          $('#mess7').html("班级简介不能为空!");
+          return false;
+        }
+
+        if ($('#project').val() == '') {
+          alert("项目不能为空!");
+          return false;
+        }
+      });
+    }</script>
+  <form action="add" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-1">所属分类：</label>
+      <div class="col-sm-9" style="width:410px;">
+        <foreach name='cate_list' item='vo'>&nbsp
+          <input type="radio" name="classCate" id="id1" value="{$vo.id}" />&nbsp {$vo.cname}</foreach>
+        <div id="tooltip1">
+          <span id="mess1" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">班级编号：</label>
+      <div class="col-sm-9">
+        <input type="text" name="classNo" id="classNo" class="col-xs-10 col-sm-5" />
+        <div id="tooltip2">
+          <span id="mess2" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">班级名称：</label>
+      <div class="col-sm-9">
+        <input type="text" name="className" id="className" class="col-xs-10 col-sm-5" />
+        <div id="tooltip3">
+          <span id="mess3" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">班级价格：</label>
+      <div class="col-sm-9">
+        <input type="text" name="classPrice" id="classPrice" class="col-xs-10 col-sm-5" />元
+        <div id="tooltip4">
+          <span id="mess4" class="mess"></span></div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">开班时间：</label>
+      <div class="col-sm-9">
+        <input type="date" name="startTime" id="startTime" class="col-xs-10 col-sm-5" />
+        <div id="tooltip5">
+          <span id="mess5" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">平均周期：</label>
+      <div class="col-sm-9">
+        <input type="text" name="avePeriod" id="avePeriod" class="col-xs-10 col-sm-5" />
+        <div id="tooltip6">
+          <span id="mess6" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">最低咨询费：</label>
+      <div class="col-sm-9">
+        <input type="text" name="coachMinPrice" id="coachMinPrice" class="col-xs-10 col-sm-5" />元
+        <div id="tooltip10">
+          <span id="mess10" class="mess"></span></div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">最高咨询费：</label>
+      <div class="col-sm-9">
+        <input type="text" name="coachMaxPrice" id="coachMaxPrice" class="col-xs-10 col-sm-5" />元
+        <div id="tooltip11">
+          <span id="mess11" class="mess"></span></div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">班级简介：</label>
+      <div class="col-sm-9">
+        <textarea rows="10" cols="51" name="classIntro" id="classIntro" value="{$vo.classintro}"></textarea>
+        <div id="tooltip7">
+          <span id="mess7" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">班级略缩图：</label>
+      <div class="col-sm-9">
+        <input type="file" accept="__PUBLIC__/images/*" value="yes" name="classPic" />
+        <div id="tooltip9">
+          <span id="mess9" class="mess"></span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label no-padding-right" for="form-field-2">添加项目：</label>
+      <div id="mess8" class="form-group">　　
+        <span id="mess8" class="mess"></span></div>
+    </div>
+    <div class="clearfix form-actions">
+      <div class="col-md-offset-3 col-md-9">
+        <button type="submit" name="c12" id="submit1" class="btn btn-info">
+          <i class="icon-ok bigger-110"></i>提交</button>&nbsp; &nbsp; &nbsp;
+        <button class="btn" type="reset">
+          <i class="icon-undo bigger-110"></i>Reset</button></div>
+    </div>
+  </form>
+</div>

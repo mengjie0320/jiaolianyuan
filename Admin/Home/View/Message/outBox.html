@@ -1,0 +1,115 @@
+﻿             <layout name='layout' />	
+			 <ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Message/index">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Message/index">消息中心</a>
+							</li>
+							<li class="active">发件箱</li>
+							
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					
+
+					<div class="page-content">
+						<div class="page-header">
+							
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+										 <body>
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th class="center">收件人分类</th>	
+														<th class="center">收件人名称</th>	
+														<th class="center">内容</th>													
+														<th class="center">状态</th>
+																											
+														<th></th>
+													</tr>
+												</thead>
+                                                   
+												<tbody>
+												 <foreach name='list' item='vo'>
+													<tr class="center">
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+														<if condition="$vo['sendertype'] eq '2'">
+														<td>学员</td>
+														<elseif condition="$vo['sendertype'] eq '0' "/>
+														<td>教练缘管理员</td>
+														<else />
+														<td>教练</td>
+														</if>
+														<td>{$vo.targetname}</td>
+														<td>{$vo.content|html_entity_decode}</td>
+														<if condition="$vo['isread'] eq '0'">
+														<td>未读</td>
+														<else />
+														<td>已读</td>
+														</if>
+														<td>
+														
+															<div id="anNiu">
+														
+																<button class="btn btn-xs btn-success">
+																<a href="__CONTROLLER__/detail?id={$vo.id}" title="查看详情"><i class="icon-search bigger-180"></i></a>
+																</button>
+
+																
+															</div>
+														</td>														
+													</tr>
+									              </foreach>
+												   <thead>
+													<tr>
+														<th></th>
+														<th></th>
+														<th></th>
+														<th></th>
+														<th></th>
+														<th class="center"><a href="__CONTROLLER__/send">发送消息</a></th>
+													</tr>
+												</thead>
+												</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+								<div style="text-align:center;font-size:24px;">
+									<ul class="pagination pagination-sm">
+										{$page}
+									</ul>
+								</div>
+								<div class="hr hr-18 dotted hr-double"></div>
+										</div>
+									</div>
+								</div>

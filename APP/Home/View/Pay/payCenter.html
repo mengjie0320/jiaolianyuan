@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>教练缘-支付中心</title>
+	<link rel="stylesheet" href="__PUBLIC__/CSS/common.css" />
+	<link rel="stylesheet" href="__PUBLIC__/CSS/pay.css" />
+	<link href="__PUBLIC__/images/public/logo.ico" rel="icon"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-2.2.1.min.js" ></script>
+</head>
+<body>
+<div class="top-warp">
+	<div class="top">
+		<a class="logo" href="__MODULE__/Index/index.html">教练缘，企业人才定制与自学平台</a>
+		<if condition="($name neq '') OR ($phone neq '')">
+		 	<div class="card-warp">
+			 	<img src="__PUBLIC__/images/{$face}" >
+				<if condition="($identity eq 'student')">
+				<p class="card">
+					<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+					<a class="learn" href="__MODULE__/Student/student.html">自学中心</a>
+				 	<a class="personal" href="__MODULE__/Student/personal.html">个人中心</a>
+		 			<a class="signout"  href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+			</div>
+	    </if>  
+	</div>
+</div>
+<!--导航-->
+<div class="nav-warp">
+	<ul class="nav">
+		<li><a href="__MODULE__/Index/index.html" target="_parent">首页</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <if condition="($identity neq '') AND ($identity eq 'teacher')">
+        <li><a href="__MODULE__/Coach/coach.html">个人中心</a></li>
+        </if>
+		<if condition="($identity neq '') AND ($identity eq 'student')">
+		<li><a href="__MODULE__/Student/student.html">自学中心</a></li>
+		</if>
+		<if condition="($identity eq '') OR ($identity neq 'student' AND $identity neq 'teacher')">
+		<li><a href="__MODULE__/Login/login.html" onclick="warn()">自学中心</a></li>
+		</if>
+	</ul>
+</div>
+<!--支付内容--->
+<div class="center">
+	<p>支付中心</p>
+	<!--只选班级-->
+	<if condition ="($classInfo[0]['classname'] neq '' AND $coachId eq '')">
+	 	<img src="__PUBLIC__/images/{$classInfo[0]['classpic']}" width="262" height="171" alt="centerImg"/>
+		<p  class="word_name">{$classInfo[0]['classname']}</p>
+		<span class="class_price">班级价格:<strong>￥{$classInfo[0]['classprice']}</strong></span>
+	</if>
+	<!--只选择教练-->
+	<if condition ="($classInfo[0]['classname'] eq '')">
+		<img src="__PUBLIC__/images/{$coachface['face']}" width="162" height="162" alt="centerImg"/>
+		<p class="word_name">教练名 : <strong>{$coachName}</strong></p>
+		<span class="class_price">教练指导服务费 :<strong> ￥{$coachprice}</strong></span>
+	</if>
+</div>
+<!--支付方式-->
+<div class="pay_way">
+	<p>支付方式</p>
+	<div class="way_img">
+		<form target="" method="">
+			<label>
+				<input type="radio" name="pay_way" checked="checked"><img src="__PUBLIC__/images/student/icon_wechat.png" alt="wayImg"/><span>微信支付</span>
+			</label>
+		</form>
+	</div>
+</div>
+<!--结算-->
+<div class="pay_count">
+	<a class="return_scan" href="__URL__/detail/id/{$classInfo[0]['id']}.html">返回继续浏览</a>
+	<p class="pay_price">应付金额：<strong >￥{$sum}</strong></p>
+	<a class="count_btn" href="#" id="pay"><input type="submit" value="去支付" onclick=" setTimeout('show()',200);"></a>
+</div>
+
+<!--支付模态框-->
+<div class="set_modal">
+	<div class="modal_form" id="modal_form">
+    	 <div class="modal_word">
+    	 	<p>支付<span style="color: red;">{$sum}</span>元</p>
+    	 </div>
+    	 <div class="qrcode">
+    	 	<p>微信扫一扫</p>
+    	 	<img src="__URL__/qrcode" alt="二维码"/>
+    	 	     <!--模拟付款按钮-->
+    	 	     <!--正常流程-->
+			     <if condition ="($classInfo[0]['classname'] neq '' AND $coachId neq '')">
+				 <a  href="__URL__/payDeal/classId/{$classInfo[0]['id']}/coachId/{$coachId}.html"><input class="button" type="button" value="模拟付款"/></a>
+    	         </if>
+    	         <!--只选班级-->
+    	         <if condition ="($classInfo[0]['classname'] neq '' AND $coachId eq '')">
+				 <a  href="__URL__/skipCoach/classId/{$classInfo[0]['id']}.html"><input class="button" type="button" value="模拟付款"/></a>
+    	         </if>
+    	         <!--只选择教练-->
+			     <if condition ="($classInfo[0]['classname'] eq '')">
+				 <a  href="__URL__/payCoachFare/classId/{$classId}/coachId/{$coachId}.html"><input class="button" type="button" value="模拟付款"/></a>
+			     </if>	
+    	 </div>
+    	 <div class="close_btn">
+    	 	<a onclick="hide()"></a>
+    	 </div>
+    </div>  
+</div>
+<!--页面的底部-->
+<div class="footer">
+	<div class="my_footer">
+		<ul class="footer_1">
+			<li><a href="#"></a></li>
+			<li><a href="#" id="weixin"><div class="weixin"></div></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="footer_2">
+				<a href="#">关于我们</a>
+				<a href="#">企业合作</a>
+				<a href="#">人才招聘</a>
+				<a href="#">讲师招募</a>
+				<a href="#">联系我们</a>
+				<a href="#">意见反馈</a>
+				<a href="#">友情链接</a>
+		</div>
+		<div class="footer_3">
+			<p>&copy;&nbsp;2016&nbsp;51jiaolianyuan&nbsp;粤ICP备&nbsp;18689008号</p>
+		</div>
+	</div>
+</div>
+
+<div id="mask"></div>
+<script type="text/javascript" src="__PUBLIC__/js/pay.js" ></script>
+</body>
+</html>

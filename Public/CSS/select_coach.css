@@ -1,0 +1,129 @@
+
+/********************选择教练部分********************/
+#select_coach{
+	width:1200px;
+	margin:0 auto 180px;
+	position:relative;
+	top:100px;
+	border:1px solid #e1e1e1;
+	-moz-box-shadow:0 2px 12px #e1e1e1;
+    -webkit-box-shadow:0 2px 12px #e1e1e1;
+    box-shadow:0 2px 12px #e1e1e1;
+	overflow:hidden;
+	min-height: 510px;
+}
+#select_coach h2{
+	font-family: '宋体';
+	display:inline-block;
+	font-size:24px;
+	line-height:40px;
+	color:#666;
+	text-shadow: 0 0 1px #e1e1e1;
+	position:relative;
+	left:40px;
+	top:14px;
+	text-indent:40px;
+	background: url(../images/student/coach_icon.png) no-repeat  0 2px;
+}
+
+#select_coach>span{
+	color:#666;
+	font-size:18px;
+	font-weight:normal;
+	position:relative;
+	left:40px;
+	top:14px;
+}
+.coach_list{
+	width:1200px;
+	padding-top:30px;
+}	
+.coach_list p{
+	font-size: 14px;
+	color:#666;
+	text-align: center;
+	padding:4px 0px;
+}
+.coach_list li{
+	width:162px;
+	height:282px;
+	float:left;
+	padding:20px 38px;
+}
+.info ul li{
+	z-index: 99;
+	width: 160px;
+	height:30px;
+	font-size: 12px ;
+	float: none;
+	padding: 0;
+	text-align: center;
+	color: #666;
+	padding-top: 12px;
+
+}
+/*查看教练详情*/
+.info ul li a{
+	color:#fff;
+	padding:4px 10px;
+	background: rgba(0,0,0,0.4);
+	border-radius: 4px;
+}
+.info ul li a:hover{
+	background:#09f;
+	color:#fff;
+}
+.coach_list .info{
+	display: none;
+	background:#e1e1e1;
+	color: #369242;
+	width: 0px;
+	height: 162px;
+	margin: 0 auto;
+	border-radius: 50%;
+	-moz-box-shadow:0 2px 10px #666;
+    -webkit-box-shadow:0 2px 10px #666;
+    box-shadow:0 2px 10px #666;
+}
+
+
+.coach_list img{
+	display:block;
+	-moz-box-shadow:0 2px 10px #666;
+    -webkit-box-shadow:0 2px 10px #666;
+    box-shadow:0 2px 10px #666;
+	border-radius:50%;
+	cursor:pointer;
+	
+}
+
+.coach_list h3{
+	width:162px;
+	text-align:center;
+	height:36px;
+	line-height:36px;
+	color:#000;
+	font-size:16px;
+	font-weight:normal;
+}
+.coach_list span{
+	font-size:16px;
+	color:#999;
+}
+.coach_list .button{
+	background:#09f;
+	color:#fff;
+	font-size:14px;
+	border-radius:6px;
+	height:36px;
+	width:120px;
+	text-align:center;
+	border:none;
+	cursor: pointer;
+	margin-left: 18px;
+
+}
+.coach_list .button:hover{
+	background:#00D6FF;
+	color:#fff;
+}

@@ -1,0 +1,1148 @@
+[ 2016-09-18T17:05:30+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-18T17:05:47+08:00 ] ::1 /admin.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:1.5061s ]
+SQL: SELECT * FROM `admin` WHERE `adminName` = 'admin' AND `password` = 'admin'  [ RunTime:0.4250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: unreadMessage E:\wamp\www\Admin\Runtime\Cache\Home\35aa7395e570a67b1b39372463a46a4e.php 第 235 行.
+NOTIC: [8] Undefined variable: unreadMessage E:\wamp\www\Admin\Runtime\Cache\Home\35aa7395e570a67b1b39372463a46a4e.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.458084s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.459084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-18T17:05:47+08:00 ] ::1 /admin.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` WHERE `adminName` = 'admin' AND `password` = 'admin'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: unreadMessage E:\wamp\www\Admin\Runtime\Cache\Home\35aa7395e570a67b1b39372463a46a4e.php 第 235 行.
+NOTIC: [8] Undefined variable: unreadMessage E:\wamp\www\Admin\Runtime\Cache\Home\35aa7395e570a67b1b39372463a46a4e.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-09-18T17:05:59+08:00 ] ::1 /admin.php/Home/Work/listW
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.5240s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.1080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status != 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.1170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-09-18T17:06:01+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-18T17:06:06+08:00 ] ::1 /admin.php/Home/Work/listW
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0520s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status != 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-18T17:06:07+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.rank, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 1 [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 596 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-09-18T17:18:13+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-09-18T17:18:17+08:00 ] ::1 /admin.php/Home/Work/listW
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status != 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.089005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.089005s ]
+
+[ 2016-09-18T17:19:46+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-09-18T17:19:48+08:00 ] ::1 /admin.php/Home/Work/listW
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status != 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-09-18T17:19:50+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-09-18T18:19:54+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-09-18T18:19:58+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-18T18:20:46+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.085004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.086005s ]
+
+[ 2016-09-18T18:20:47+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-18T18:22:38+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.109006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.110006s ]
+
+[ 2016-09-18T18:23:02+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.073004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.073004s ]
+
+[ 2016-09-18T18:23:15+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.066003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.066003s ]
+
+[ 2016-09-18T18:23:20+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0020s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.074004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.074004s ]
+
+[ 2016-09-18T18:23:47+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:23:47',`status`='1' WHERE ( id = 3 ) [ RunTime:0.1130s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: stuId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 91 行.
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 92 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = null AND `classId` = null LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 96 行.
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `class_project` WHERE ( classId= ) LIMIT 1  
+ERR: 1064:Erreur de syntaxe près de ') LIMIT 1' à la ligne 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `class_project` WHERE ( classId= ) LIMIT 1  
+
+[ 2016-09-18T18:26:01+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-09-18T18:26:33+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.056003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.056003s ]
+
+[ 2016-09-18T18:26:35+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0020s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-09-18T18:26:45+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:26:44',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0940s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: stuId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 91 行.
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 92 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = null AND `classId` = null LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE ( classId=1 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-18T18:26:46+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.062004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.062004s ]
+
+[ 2016-09-18T18:28:10+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.070004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.071004s ]
+
+[ 2016-09-18T18:28:12+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.082005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.082005s ]
+
+[ 2016-09-18T18:28:18+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:28:18',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: stuId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 91 行.
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 92 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = null AND `classId` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE ( classId=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-18T18:30:04+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.060004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.060004s ]
+
+[ 2016-09-18T18:30:06+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.091005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.091005s ]
+
+[ 2016-09-18T18:30:10+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0170s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:30:09',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: stuId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 91 行.
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 92 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = null AND `classId` = null LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: classId E:\wamp\www\Admin\Home\Controller\WorkController.class.php 第 96 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE `classId` = null LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `stu_class` SET `graduateStatus`='1' WHERE `stuId` = null AND `classId` = null [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-09-18T18:37:55+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.043003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.044003s ]
+
+[ 2016-09-18T18:38:07+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-18T18:38:12+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, a.stuId, a.classId, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-09-18T18:38:16+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0130s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:38:16',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = 1 AND `classId` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE `classId` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `stu_class` SET `graduateStatus`='1' WHERE `stuId` = 1 AND `classId` = 1 [ RunTime:0.0930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-18T18:45:36+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.068004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.068004s ]
+
+[ 2016-09-18T18:45:57+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-09-18T18:46:01+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0000s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, a.stuId, a.classId, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-09-18T18:47:02+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='1',`remarkTime`='2016-09-18 18:47:02',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = 1 AND `classId` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE `classId` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `stu_class` SET `graduateStatus`='1' WHERE `stuId` = 1 AND `classId` = 1 [ RunTime:0.0910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-18T18:47:20+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-18T18:47:39+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-09-18T18:47:46+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: select id, remark, status from work where id = 3 [ RunTime:0.0010s ]
+SQL: select a.id, a.stuId, a.classId, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = 0 left join class as d on c.classId = d.id left join project as e on a.projectId = e.id where a.id = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.081005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.082005s ]
+
+[ 2016-09-18T18:47:54+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: UPDATE `work` SET `remark`='ke yi a',`rank`='0',`remarkTime`='2016-09-18 18:47:53',`status`='1' WHERE ( id = 3 ) [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `stu_class` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` WHERE `stuId` = 1 AND `classId` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `class_project` WHERE `classId` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `stu_class` SET `graduateStatus`='1' WHERE `stuId` = 1 AND `classId` = 1 [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-18T18:47:55+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012000s ]
+
+[ 2016-09-18T18:57:19+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-18T19:25:07+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.075005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.076005s ]
+
+[ 2016-09-18T19:26:09+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-09-18T20:38:13+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: select COUNT(*) as count from message where targetType = 0 and isRead = 0 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `work` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT work.id,student.stuName,class.className,project.name,work.submitTime,work.finishedTime,work.workUrl,work.remark,work.remarkTime,work.status FROM `work` LEFT JOIN student ON work.stuId = student.id LEFT JOIN class ON work.classId = class.id LEFT JOIN project ON work.projectId = project.id  WHERE ( work.status = 0 ) ORDER BY id LIMIT 0,3   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+

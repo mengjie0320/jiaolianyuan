@@ -1,0 +1,332 @@
+.lear p{
+	width:1200px;
+	height: 40px;
+	line-height: 40px;
+	color:#fff;
+	position: absolute;
+	bottom:0px;
+	left: 0;
+	font-size: 14px;
+	text-align: center;
+	background:#22428B;
+}
+.lear p a{
+	text-decoration: underline;
+	font-size: 15px;
+	display: inline-block;
+	padding:0 4px;
+	color:#db1e48;
+}
+.lear p a:hover{
+	font-size: 16px;
+	color:#f50b3f;
+}
+/********************内容区域********************/
+#main{
+	width:1200px;
+	margin:0 auto;
+	min-height:560px;
+}
+/********************内容的左边********************/
+.main_left{
+	margin-top:40px;
+	width:224px;
+	float:left;
+}
+.content_list{
+	width:224px;
+	box-shadow:0 0px 6px #ccc;
+	-moz-box-shadow:0 0px 6px #CCC;
+	-webkit-box-shadow:0 0px 6px #CCC;
+}
+.content_list li{
+	height:60px;
+	width:224px;
+}
+.content_list li:last-child{
+	border-top: 1px solid #ccc;
+}
+.content_list .select a,.content_list li:hover a{
+	color:#000;
+	font-weight: bold;
+}
+.content_list a{
+	display: block;
+	height:60px;
+	line-height: 60px;
+	width:224px;
+	text-indent: 80px;
+	color:#666;
+}
+
+
+/********************内容右边主页的信息部分********************/
+.main_right{			/*主页、班级和回答的公共部分*/
+	margin-top:40px;
+	float:right;
+	width:960px;
+}
+/********************内容右边班级信息部分********************/
+.class{
+	border:1px solid #e1e1e1;
+	box-shadow:0 0 6px #CCC;
+	-moz-box-shadow:0 0 6px #CCC;
+	-webkit-box-shadow:0 0 6px #CCC;
+	font-family:"微软雅黑";
+	padding-bottom:40px;
+}
+/*******二级导航栏*******/
+.breadcrumb{
+	height: 36px;
+	margin-bottom:24px;
+	margin-left: 30px;
+}
+.breadcrumb li{
+	height: 36px;
+	float: left;
+	position: relative;
+}
+.breadcrumb li a{
+	display: block;
+	height: 36px;
+	line-height: 38px;
+	color: #666;
+}
+.breadcrumb i{
+	float: left;
+	display: block;
+	height: 36px;
+	width:30px;
+	background: url(../images/student/right.png) no-repeat 4px 10px;
+}
+.breadcrumb li:first-child a{
+	letter-spacing: 8px;
+}
+.breadcrumb li:last-child a{
+	color:#000;
+	font-weight: bold;
+}
+.breadcrumb li:hover  a{
+	color:#000;
+	font-weight: bold;
+}
+
+/*********项目详情部分*********/
+.project_detail{
+	width:854px;
+	margin:0 auto;
+	position: relative;
+	padding-bottom: 20px;
+}
+.project_progress{
+	width:854px;
+	height:134px;
+	margin:60px 0  20px 0;
+	position:relative;
+	left:40px;
+}
+.project_progress .dottedline{
+	position:relative;
+	top:30px;
+	left: -26px;
+}
+.project_progress img{
+	margin-left: -22px;
+}
+.project_progress i{
+	color:#333;
+	padding: 4px 4px;
+	font-size:14px;
+	margin-left:-5px;
+	position:relative;
+	top:76px;
+	left:-60px;
+	font-style: normal;
+	cursor:default;
+}
+.project_progress span{
+	font-size:14px;
+	position:relative;
+	top:76px;
+	left:-62px;
+}
+.project_mes{
+	width:854px;
+}
+.project_mes>li a{
+	border-radius:6px;
+	padding:3px 10px 2px 22px;
+	background:#db1e48 url(../images/student-center-img/student_img.png) no-repeat 4px -55px;
+	color:#fff;	
+	font-size:14px;
+	text-align:right;
+}
+.project_mes>li a:hover{
+	background:#f72e5d url(../images/student-center-img/student_img.png) no-repeat 4px -55px;
+}
+.project_mes h2 ,.class .help2{
+	color:#333;
+	font-size:16px;
+	margin-left:24px;
+	letter-spacing:4px;
+}
+.class .help2{
+	background: url(../images/student-center-img/student_img.png) no-repeat 4px -24px;
+	margin-left: 0;
+	text-indent: 36px;
+}
+.project_mes h2 span{
+	color:#333;
+	width:750px;
+	display: block;
+	position:relative;
+	top:-22px;
+	left:98px;
+	font-weight: normal;
+}
+.project_mes .project_purpose{
+	position:relative;
+	left:140px;
+	line-height:24px;
+	margin-bottom:30px;
+}
+.project_mes .project_purpose li{
+	list-style:disc;
+}
+/*指南部分*/
+.completion{
+	width:854px;
+	border:1px solid #e1e1e1;
+	box-shadow:0px 0px 2px #ccc;
+	margin: 20px 0;
+}
+.completion h2{
+	color:#22428B;
+	font-size:16px;
+	height:40px;
+	line-height:30px;
+	margin-left:20px;
+}
+.completion  .not-pass{
+	color:red;
+}
+/*领取新项目*/
+.completion form input{
+	background: #25408f;
+	border: none;
+	outline: none;
+	color:#fff;
+	width:100px;
+	height: 32px;
+	line-height: 30px;
+	border-radius: 16px;
+	text-align: center;
+}
+.completion form input:hover{
+	background: #2955d3;
+	cursor: pointer;
+}
+/*评语*/
+.completion .eval{
+	margin-left: 20px;
+}
+/*提交项目按钮*/
+.project_detail #submit{
+	height: 34px;	
+	width:90px;
+	outline: none;
+	border: none;
+	background: #25408f;
+	color: #fff;
+	border-radius:24px;
+	font-size: 14px;
+	cursor: pointer;
+	position: absolute;
+	bottom:-40px;
+	left: 41%;
+	display: none;
+	
+}
+#submit:hover{
+	background: #2959e7;
+}
+
+/*确认提交项目表单的样式*/
+.project_detail form{
+	width:200px;
+	margin: 14px auto;
+	
+}
+.project_detail .upload{
+	display: inline-block;
+	text-align: center;
+	padding: 10px 24px;
+	z-index: 10;
+	background:#22428B;
+	color:#fff;
+	font-size: 16px;
+	border-radius: 26px;
+	margin-left: 44%;
+	position: relative;
+	top:46px;
+	left: -42px;
+}
+.project_detail .upload:hover{
+	background:#2959e7;
+}
+/*文件上传的样式*/
+
+#file{
+	width:160px;
+	outline: none;
+	background: none;
+	border: none;
+	color:#666;
+	cursor: pointer;
+	position: relative;
+	top:0px;
+	left: 48px;
+}
+/********************内容右问答级部分********************/
+.ques{
+	width:960px;
+	float: right;
+	display: none;
+}
+.coach_list{
+	width:890px;
+	position: relative;
+	margin-bottom:20px ;
+	overflow:hidden;
+	padding:0 30px 40px 30px;
+	
+}
+.coach_list li{
+	float:left;
+	width:230px;
+	height:238px;
+}
+.coach_list img{
+	border-radius:50%;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.coach_list img:hover{
+	border:1px solid #e1e1e1;	
+	box-shadow:0 0 8px #666;
+}
+.coach_list h2,.coach_list p{
+	text-align:center;
+	font-weight:normal;
+	font-size:16px;
+	color:#666;
+}
+.coach_list h2:hover{
+	color:#097BF8;
+}
+/******页脚*****/
+.dataTables_paginate {
+	position: absolute;
+	bottom:2px;
+	left:400px;
+}

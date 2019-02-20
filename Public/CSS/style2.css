@@ -1,0 +1,308 @@
+body
+{
+	background:#AEBFC9 url(../images/index/bg.gif) repeat-x;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+/*包裹聊天室的框*/
+.col-md-6  .thumbnail{
+	margin-top: 60px;
+	background:#D1EAFC;
+	border: none;
+	min-width:600px;
+	height: 550px;
+	padding:0;
+	border-bottom-left-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 0;
+	position: relative;
+	
+}
+.thumbnail .caption{
+	padding:0px;
+}
+/*聊天室内容框*/
+#dialog
+{
+	position: absolute;
+	bottom:0px;
+	height:500px;
+	background:#EEEEEE;
+	overflow:auto;
+	width: 600px;
+	border-right: 1px solid #ccc;
+	border-top:1px solid #ccc;
+	padding:10px;
+}
+/*聊天内容*/
+.speech_item{
+	color: #666;
+	font-size: 14px;
+}
+/*用户头像*/
+.speech_item>img{
+	border-radius: 50%;
+	height: 40px;
+	width:40px;
+	box-shadow: 0 0 2px #09f;
+}
+/*在线用户div*/
+.col-md-3 .thumbnail{
+	margin-top: 60px;
+	margin-left: 18px;
+	padding:0px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	position: relative;
+	height:782px;
+	background:#D1EAFC;
+	width:236px;
+	border: none;
+}
+.col-md-3 .thumbnail a{
+	width:36px;
+	height: 36px;
+	position:absolute;
+	top:0;
+	right:0;
+	background: url(../images/select_coach_img/coach_detail.png) no-repeat 2px -76px;
+}
+.col-md-3 .thumbnail a:hover{
+	background-position: 2px -114px;
+}
+/*在线用户列表*/
+#userlist
+{
+	height:500px;
+	background:#EEEEEE;
+	position: absolute;
+	bottom:232px;
+	width:236px;
+}
+
+#userlist > h4
+{
+	width:236px;
+	padding:10px 4px;
+    text-align:center;
+	font-size:14px;
+	color:#09f;
+	margin: 0;
+	background: rgba(255,255,255,0.5) url(../images/index/onlin_user.png) no-repeat 66px 6px;
+	border-bottom: 1px solid #ccc;
+	border-top:1px solid #ccc;
+
+}
+#userlist > li
+{
+	color:#666;
+	list-style:none;
+	padding:6px 0;
+	text-indent: 10px;
+	background: rgba(255,255,255,0.5);
+}
+#userlist > li:hover{
+	background: #D1EAFC;
+	color:#fff;
+}
+.col-md-6 form{
+	width:600px;
+	background: #fff;
+	position: relative;
+	border-bottom-left-radius: 8px;
+	height:232px ;
+	border-top:1px solid #e1e1e1;
+}
+/*内容输入框*/
+.textarea
+{
+	background:#fff;
+	margin-top: 0;
+	height: 160px;
+	width:100%;
+	border: none;
+	text-indent: 10px;
+	outline: none;
+}
+/*发送按钮div*/
+.say-btn
+{
+	position:absolute;
+	bottom:12px;
+	right: 2px;
+}
+.btn-default {
+	padding:4px 28px;
+	background: #09f;
+	border-radius: 6px;
+	color: #fff;
+	letter-spacing: 8px;
+}
+.btn-default:hover{
+	background: #05B7FA;
+	color:#fff;
+	border: 1px solid #05B7FA;
+}
+.words
+{
+	margin:8px;
+}
+/*所有人*/
+#client_list{
+	margin-bottom:0;
+	padding:0 10px;
+	border: 1px solid #666;
+}
+/*提示*/
+#tip{
+	line-height: 18px;
+	color:#09f;
+	border-bottom: 1px solid #ccc;
+	background: rgba(0,0,0,0.2);
+}
+/*录音*/
+#record{
+	margin-left: 6px;
+	border: none;
+	font-size: 0;
+	height: 26px;
+	width:26px;
+	line-height: 26px;
+	background: url(../images/index/chat_icon.png) no-repeat 2px 2px;	
+	outline: none;
+}
+#record:hover{
+	
+	background-position:-1px -26px;
+	border: 1px solid #09f;
+	border-radius: 50%;
+}
+/*发送录音,上传图片*/
+#upload,.uploadImage{
+	position: relative;
+	top:3px;
+	padding:2px 2px;
+	border: none;
+	font-size: 12px;
+	outline: none;
+	display: none;
+	color:#fff;
+	background:#09f;
+	border-radius: 4px;
+	
+}
+#upload:hover,.uploadImage:hover{
+	background:#03FAF2;
+	
+}
+/*选择图片*/
+.col-md-6 form span{
+	display: inline-block;
+	width:26px;
+	height: 26px;
+	z-index: 2;
+	background: url(../images/index/chat_icon.png) no-repeat 0px -58px;
+	position: relative;
+	top:6px;
+	cursor: pointer;
+}
+.col-md-6 form span:hover{
+	background-position:0px -88px;
+	
+}
+.col-md-6 input[type="file"]{
+	border: none;
+	background:#000;
+	outline: none;
+	display: inline-block;
+	width:20px;
+	height:20px;
+	overflow: hidden;
+	z-index: 1;
+	opacity: 0;
+}
+/*上传图片*/
+.uploadImage{
+	border: none;
+}
+/*查看所有历史记录*/
+.showHistory{
+	position: relative;
+	top:2px;
+	padding:2px 2px;
+	border: none;
+	font-size: 12px;
+	float: right;
+	display: inline-block;	
+	background:url(../images/index/chat_icon.png) no-repeat -2px -120px;
+	text-indent:20px;
+}
+.showHistory:hover{
+	color:#09f;
+	background-position: -2px -150px;
+}
+/*聊天输入的内容*/
+.triangle-isosceles {
+    position:relative;
+    padding:10px;
+    margin:10px 0 15px;
+    color:#000;
+    background:#D3FF93; /* default background for browsers without gradient support */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#EFFFD7), to(#D3FF93));
+    background:-moz-linear-gradient(#EFFFD7, #D3FF93);
+    background:-o-linear-gradient(#EFFFD7, #D3FF93);
+    background:linear-gradient(#EFFFD7, #D3FF93);
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -moz-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+    -webkit-box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+     box-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.3);  
+     color: #666;
+     word-wrap:break-word;
+     word-break:normal; 
+}
+
+.triangle-isosceles.top {
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#D3FF93), to(#EFFFD7));
+    background:-moz-linear-gradient(#D3FF93, #EFFFD7);
+    background:-o-linear-gradient(#D3FF93, #EFFFD7);
+    background:linear-gradient(#D3FF93, #EFFFD7);
+}
+
+.triangle-isosceles:after {
+    content:"";
+    position:absolute;
+    bottom:-9px;
+    left:15px;
+    border-width:9px 21px 0; 
+    border-style:solid;
+    border-color:#D3FF93 transparent;
+    display:block; 
+    width:0;
+}
+.triangle-isosceles.top:after {
+    top:-9px;
+    left:15px;
+    bottom:auto;
+    border-width:0 9px 9px;
+    border-color:#D3FF93 transparent;
+}
+
+.user_icon
+{
+	float:left;border:1px solid #DDDDDD;padding:2px;margin:0 5px 0 5px;
+}
+
+.cp
+{
+	color:#888888;
+	text-align:center;
+	font-size:11px;
+}
+.column a img{
+	width:100px;
+	margin-left:300px;
+	margin-top: 6px;
+}

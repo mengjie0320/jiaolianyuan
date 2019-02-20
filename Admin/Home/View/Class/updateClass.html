@@ -1,0 +1,179 @@
+﻿				<layout name='layout' />
+				
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Class/index">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Class/index"> 班级管理</a>
+							</li>
+					
+							<li class="active">编辑</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+		
+					<foreach name='class' item='vo'>
+					</foreach>
+					<form action="update" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">ID：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="id" id="form-input-readonly" value="{$vo.id}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+						</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">班 　 　 号：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="classNo" id="form-input-readonly" value="{$vo.classno}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+						</div>
+
+						<div class="space-4"></div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-2">班 级 名 称：</label>
+
+							<div class="col-sm-9">
+							<input type="text" name="className" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.classname}" />
+							</div>
+						</div>
+						
+
+
+						<div class="space-4"></div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-2">班 级 价 格：</label>
+
+							<div class="col-sm-9">
+							<input type="text" name="classPrice" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.coachmaxprice}　元" />
+							</div>
+						</div>
+	
+						<div class="space-4"></div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-2">最低咨询费：</label>
+
+							<div class="col-sm-9">
+							<input type="text" name="classPrice" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.coachminprice}　元" />
+							</div>
+						</div>
+						
+						<div class="space-4"></div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-field-2">最高咨询费：</label>
+
+							<div class="col-sm-9">
+							<input type="text" name="classPrice" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.classprice}　元" />
+							</div>
+						</div>
+
+						<div class="space-4"></div>
+
+						<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">开 班 时 间：</label>
+
+						<div class="col-sm-9">
+						<input type="date" name="startTime" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.starttime}" />
+						</div>
+					   </div>
+					   
+					   <div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">平 均 周 期：</label>
+
+						<div class="col-sm-9">
+						<input type="text" name="avePeriod" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.aveperiod}" />
+						</div>
+					   </div>
+					   
+					   <div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">班 级 简 介：</label>
+
+						<div class="col-sm-9">
+						<textarea rows="10" cols="53" name="classIntro" value="{$vo.classintro}" >{$vo.classintro}</textarea>
+						</div>
+					   </div>
+					   
+					   
+					   
+					   <div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">修 改 项 目：</label>
+						
+						<foreach name='project_list' item='vo'>						
+						　　<input type="checkbox" id="checkbox" name="project[]" value="{$vo.name}"/>
+						　{$vo.name}
+						</foreach>
+						<foreach name='class_project_list' item='vo'>						
+						　　<input type="hidden" name="name[]" value="{$vo.name}"/>
+						</foreach>
+						<script>
+						 window.onload = function (){
+								var checkbox  = document.getElementsByName("project[]");
+								 var checkbox2 = document.getElementsByName("name[]");
+								 //alert(checkbox2.length);
+									for (var i=0;i<checkbox.length;i++){
+									  for (var j=0;j<checkbox2.length;j++){
+									  if(checkbox[i].value == checkbox2[j].value){
+									  checkbox[i].checked = true;}
+									  }
+									  }
+									}
+						</script>
+					   </div>
+					   
+					  <!--  <div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">选择分类：</label>
+						<foreach name='cate_list' item='vo'>
+						　　<input type="radio" name="name" />
+						　{$vo.cname}
+						</foreach>
+					   </div> -->
+				       
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info" type="submit">
+									<i class="icon-ok bigger-110"></i>
+							提交
+								</button>
+							
+								
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+			</div>

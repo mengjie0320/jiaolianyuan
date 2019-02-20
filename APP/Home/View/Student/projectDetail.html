@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="教练缘，教练，课程">
+	<meta name="description" content="教练缘为你量身订制教练学IT!">
+	<title>教练缘-教练中心</title>
+	<link href="__PUBLIC__/CSS/common.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/CSS/project-detail.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/images/publiclogo.ico" rel="icon"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-2.2.1.min.js"></script>
+</head>
+<script>
+	window.onload = function(){
+		var go_project = document.referrer ;
+        $("#go_project").attr("href",go_project);
+	};
+</script>
+<body>
+
+<!--导航栏-->
+<div class="top-warp">
+	<div class="top">
+		<a class="logo" href="__MODULE__/Index/index.html">教练缘，企业人才定制与自学平台</a>
+		<if condition="($name neq '') OR ($phone neq '')">
+		 	<div class="card-warp">
+			 	<img src="__PUBLIC__/images/{$face}" >
+				<!--学员头像进入个人中心-->
+				<if condition="($identity eq 'student')">
+				<p class="card">
+					<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+					<a class="learn" href="__MODULE__/Student/student.html">自学中心</a>
+				 	<a class="personal" href="__MODULE__/Student/personal.html">个人中心</a>
+		 			<a class="signout"  href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+			</div>
+	    </if>  
+	</div>
+</div>
+<!--导航-->
+<div class="nav-warp">
+	<ul class="nav">
+		<li><a href="__MODULE__/Index/index.html" target="_parent">首页</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <if condition="($identity neq '') AND ($identity eq 'teacher')">
+        <li><a href="__MODULE__/Coach/coach.html">个人中心</a></li>
+        </if>
+		<if condition="($identity neq '') AND ($identity eq 'student')">
+		<li><a href="__MODULE__/Student/student.html">自学中心</a></li>
+		</if>
+		<if condition="($identity eq '') OR ($identity neq 'student' AND $identity neq 'teacher')">
+		<li><a href="__MODULE__/Login/login.html" onclick="warn()">自学中心</a></li>
+		</if>
+	</ul>
+</div>
+<!--自学流程图-->
+<div class="lear-warp">
+	<div class="lear">
+		<if condition="($ifSelectCoach eq '400')">
+		<p>温馨提示！若在自学的过程中遇到问题，可以选择 <a href="__MODULE__/Detail/selectCoach/id/{$classId}.html">教练</a>进行指导！</p>
+</if>
+
+	</div>
+</div>
+<!--主要内容-->
+<div id="main">
+	<!--内容的左边栏-->
+	<div class="main_left">
+    	<ul class="content_list">
+            <li id="itemDetail" class="select"><a>项目详情</a></li>
+            <li id="coach"><a href="#" >咨询教练</a></li>
+        </ul>
+    </div>
+    <!--内容右边班级的信息-->
+     <div class="main_right class">
+        <!--<h2><a id="go_class" href="__URL__/student" >个人中心</a><b></b><a id="go_class" href="__URL__/student" >班级</a><b></b> <a id="go_project" href="#">项目</a><b></b>项目详情</h2>-->
+      	<ul class="breadcrumb">
+			<li><a id="go_class" href="__URL__/student.html">班级</a></li><i></i>
+			<li><a id="go_project" href="javascript:history.go(-1)">{$className}</a></li><i></i>
+			<li><a href="#">实践项目</a></li>
+      	</ul>
+        <!--项目的详情-->
+        <div class="project_detail" id="project_detail">
+	        <if condition="($proRes['unsubmited'][0][status] neq '')">
+	        	<div class="project_progress">
+	              	<img src="__PUBLIC__/images/student-center-img/get_active.png" alt="领取项目"/><i>领取项目</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/ing_active.png" alt="进行中"/> <i href="#">进行中</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/upload_normal.png" alt="上传作业"/> <i href="#">上传作业</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/wait_normal.png" alt="等待批阅"/><i>等待批阅</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <!--需要一个灰色的批阅完成-->
+	                <img src="__PUBLIC__/images/student-center-img/pass_normal.png" alt="批阅完成"/><i>批阅完成</i>
+	            </div>
+	        <elseif condition="($proRes['audit'][0][status] eq '0')"/>
+		        <div class="project_progress">
+	              	<img src="__PUBLIC__/images/student-center-img/get_active.png" alt="领取项目"/><i>领取项目</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/ing_active.png" alt="进行中"/> <i href="#">进行中</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/upload_active.png" alt="上传作业"/> <i href="#">上传作业</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/wait-_active.png" alt="等待批阅"/><i>等待批阅</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <!--需要一个灰色的批阅完成-->
+	                <img src="__PUBLIC__/images/student-center-img/pass_normal.png" alt="批阅完成"/><i>批阅完成</i>
+	            </div>
+	        <elseif condition="($proRes['done'][0][status] eq '1')"/>
+	            <div class="project_progress">
+	              	<img src="__PUBLIC__/images/student-center-img/get_active.png" alt="领取项目"/><i>领取项目</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/ing_active.png" alt="进行中"/> <i href="#">进行中</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/upload_active.png" alt="上传作业"/> <i href="#">上传作业</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/wait_active.png" alt="等待批阅"/><i>等待批阅</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/passed.png" alt="批阅完成"/><i>批阅完成</i>
+	            </div>
+	        <elseif condition="($proRes['notpass'][0][status] eq '2')"/>
+		        <div class="project_progress">
+	              	<img src="__PUBLIC__/images/student-center-img/get_active.png" alt="领取项目"/><i>领取项目</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/ing_active.png" alt="进行中"/> <i href="#">进行中</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/upload_active.png" alt="上传作业"/> <i href="#">上传作业</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/wai_active.png" alt="等待批阅"/><i>等待批阅</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/unpassed.png" alt=""/><i>批阅未通过</i>
+	            </div>
+	        <elseif condition="($proRes['bactivate'][0][status] eq '0')"/>
+	            <div class="project_progress">
+	              	<img src="__PUBLIC__/images/student-center-img/get_normal.png" alt="领取项目"/><i>领取项目</i>
+	                
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/ing_normal.png" alt="进行中"/> <i>进行中</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/upload_normal.png" alt="上传作业"/> <i>上传作业</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <img src="__PUBLIC__/images/student-center-img/wait_normal.png" alt="等待批阅"/><i>等待批阅</i>
+	                <span class="dottedline"><img src="__PUBLIC__/images/student-center-img/dottedline.png" alt="虚线条"/></span>
+	                <!--需要一个灰色的批阅完成-->
+	                <img src="__PUBLIC__/images/student-center-img/pass_normal.png" alt="批阅完成"/><i>批阅完成</i>
+	            </div>
+	        <else/>
+	        </if>
+            <ul class="project_mes">
+				<volist name = "projectInfo" id = "projectInfo" empty = "暂无班级">
+					<li>
+	                	<h2>项目名称：<span>{$projectInfo['name']}</span></h2>
+	                </li>
+	            	<li>
+	                	<h2>项目意义：<span>{$projectInfo['sense']|html_entity_decode}</span></h2>
+	                </li>
+	                <li>
+	                	<h2>项目内容：<span>{$projectInfo['request']}</span></h2>
+	                   
+	                </li>
+	                <li>
+	                	<h2>要求时间：<span>{$projectInfo['requiretime']}天</span></h2>
+	                </li>
+	                <li>
+	                	<h2>相关资料：<span>相关资料请点击旁边按钮查看<a href="http://{$projectInfo['dataurl']}" target="_blank">链接</a></span></h2>
+	                </li>
+	                <if condition="($proRes['unsubmited'][0]['value1'])">
+	                	<li>
+	                	<h2>项目超时：<?php echo round($proRes['unsubmited'][0]['value2'],2); ?>小时 <br>{$proRes['unsubmited'][0]['message1']}</h2>
+	                    </li>
+	                <elseif condition="($proRes['unsubmited'][0]['value2'])"/>
+	                	<li>
+	                	<h2>倒计时 : 项目还剩&nbsp;&nbsp;<?php echo round($proRes['unsubmited'][0]['value2'],2); ?>小时 &nbsp;&nbsp;{$proRes['unsubmited'][0]['message2']}</h2>
+	                    </li>
+	                </if>
+            	</ul>
+            </volist>
+            <div class="project_detail">
+	            <if condition="($proRes['unsubmited'][0][status] neq '')">
+	            <div class="completion">
+	            	<h2 class="help2">指南：</h2>
+         		</div>  
+         		<!--按钮部分-->
+	        	<label class="upload" for="file">提交项目</label>
+		        <form enctype="multipart/form-data" method="post" action="__URL__/submitPro/projectid/{$proRes['unsubmited'][0]['projectid']}.html" >
+		        	<input type="file" id = "file" name="project"  accept="__PUBLIC__/images/*" > <!--accept路径有待研究hidden=""-->
+		        	<input type="submit" id="submit" name="submit" value="确认提交">
+		        </form>
+	        </div>
+	        
+            <elseif condition="($proRes['audit'][0]['status'] eq '0')"/>
+        	<div class="completion">
+        		<h2>请耐心审核通过</h2>  <br>
+            </div>
+            <elseif condition="($proRes['done'][0]['status'] eq '1')"/>
+        	<div class="completion">
+            	<h2>恭喜你，审核通过！</h2>  <br>
+            	<span>&nbsp;&nbsp;&nbsp;&nbsp;等级为：<if condition="($proRes['done'][0]['rank'] eq '0')">A</if>
+            		<if condition="($proRes['done'][0]['rank'] eq '1')">B</if>
+            		<if condition="($proRes['done'][0]['rank'] eq '2')">C</if>
+	            	<if condition="($proRes['done'][0]['rank'] eq '3')">D</if>
+	            	<if condition="($proRes['done'][0]['rank'] eq '4')">E</if>
+            	</span><br><br>
+                <span class="eval">评语：<span>{$proRes['done'][0][remark]}</span></span>
+            </div>
+            <elseif condition="($proRes['notpass'][0]['status'] eq '2')"/>
+        	<div class="completion">
+            	<h2 class="not-pass">Sorry，审核未通过</h2>  <br>
+                <span class="eval">评语：<p>{$proRes['notpass'][0]['remark']}</p></span>
+                <form enctype="multipart/form-data" method="post" action="__URL__/doagainPro/projectid/{$proRes['notpass'][0]['projectid']}.html" >
+                	<input type = "submit" name="again" value="选择重新做">
+                </form>
+            </div>
+            <elseif condition="($proRes['bactivate'][0]['status'] eq '0')"/>
+            <div class="completion">
+            	<h2>Sorry，你还没有申报项目！</h2>  <br>
+                <span class="eval">评语：<p>{$workResult[0][remark]}</p></span>
+	            <form enctype="multipart/form-data" method="post" action="__URL__/getPro/projectid/{$proRes['bactivate'][0]['projectid']}.html" >
+                	<input type = "submit" name="newpro" value="领取新项目">
+                </form>
+            </div>
+	        <else/>
+            </if>
+        </div>
+        </div>
+     	<!--内容右边问答部分-->
+	    <div class="ques" id="ques">
+	        <ul class="coach_list">
+				<!--循环遍历学员的教练列表-->
+				<volist name = "coachesList2" id = "coachesList2" empty = "您暂没有选择教练">
+		            <li>
+		                <!--<a href="#">-->
+					 	<a href="__MODULE__/Index2/index2/room_id/{$coachesList3['id']}.html">
+		                    <img src="__PUBLIC__/images/{$coachesList2['face']}" alt=""/>                 
+		                    <h2>{$coachesList2['tname']}</h2>
+		                    <p>{$coachesList2['onlinetime']}</p>
+		                </a>
+		            </li>
+	            </volist>
+	            <!--页码-->
+	            {$page}
+	        </ul>  
+	    </div>
+</div>  
+
+<!--页面的底部-->
+<div class="footer">
+	<div class="my_footer">
+		<ul class="footer_1">
+			<li><a href="#"></a></li>
+			<li><a href="#" id="weixin"><div class="weixin"></div></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="footer_2">
+				<a href="#">关于我们</a>
+				<a href="#">企业合作</a>
+				<a href="#">人才招聘</a>
+				<a href="#">讲师招募</a>
+				<a href="#">联系我们</a>
+				<a href="#">意见反馈</a>
+				<a href="#">友情链接</a>
+		</div>
+		<div class="footer_3">
+			<p>&copy;&nbsp;2016&nbsp;51jiaolianyuan&nbsp;粤ICP备&nbsp;18689008号</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/projectDetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+			<layout name='layout' />
+					<script>
+					var newImg = document.createElement("img");
+					  newImg.src = "{$list_1[0]['classpic']|html_entity_decode}";
+					  newImg.style.width = "300px";
+					  $("#pic").append(newImg);
+					</script>
+					<ul class="breadcrumb" style="line-height:50px;">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Class/index">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Class/index">班级管理</a>
+							</li>
+							
+							<li class="active">班级详情</li>
+							
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+
+				
+			
+				<div  style="margin-left:5px;font-size:20px;">
+					<!--<h3 class="main-heading"><span>Contact info</span></h3>-->
+
+					<ul style=" list-style-type:none;">
+						<foreach name='list_1' item='vo'>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-barcode">						</i> 班 　 　 号:</span>　 {$list_1[0]['classno']}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-tag">					</i> 班 级 名 称:</span>　 {$vo.classname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-usd">						</i> 班 级 价 格:</span>　 {$vo.classprice}元</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-dashboard">					</i> 开 班 时 间:</span>　 {$vo.starttime}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-time">						</i> 平 均 周 期:</span>　 {$vo.aveperiod}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list">						</i> 所 属 分 类:</span>　 {$vo.cname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-usd">						</i> 最低咨询费:</span>　 {$vo.coachminprice}元</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-usd">						</i> 最高咨询费:</span>　 {$vo.coachmaxprice}元</li>
+						<li id="pic" style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-picture">						</i>  缩　略　图:</span>　 <img style="width:150px;" src="http://localhost/Public/images/{$vo.classpic}" /></li>
+						<li style="padding:10px 10px 50px 10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list-alt">		</i> 班 级 简 介:</span>　 {$vo.classintro}</li>
+						</foreach>
+						</ul>
+						
+						
+						
+					<div>	
+						<table id="sample-table-1" class="table table-striped table-bordered table-hover" style="width:80%;margin-top:100px;">
+								<thead>
+									<tr>
+										<th class="center" style="color:red;">班级内容</th>
+										<th class="center">项目序号:</th>	
+										<th class="center">项目名称:</th>
+									</tr>
+								</thead>
+								   
+								<tbody>
+								 <foreach name='list_3' item='vo'>
+									<tr class="center">
+										<td style="border:0px;">{$vo.}</td>
+										<td>{$vo.}</td>
+										<td>{$vo.name}</td>											
+									</tr>
+								  </foreach>
+								</tbody>
+							</table>
+					</div>
+					<div>
+						<table id="sample-table-1" class="table table-striped table-bordered table-hover" style="width:80%;margin-top:100px;">
+								<thead>
+									<tr>
+										<th class="center" style="color:red;">班级教练</th>
+										<th class="center">教练号:</th>	
+										<th class="center">教练名:</th>
+									</tr>
+								</thead>
+								   
+								<tbody>
+								 <foreach name='list_2' item='vo'>
+									<tr class="center">
+										<td style="border:0px;">{$vo.}</td>
+										<td>{$vo.}</td>
+										<td>{$vo.tname}</td>											
+									</tr>
+								  </foreach>
+								</tbody>
+							</table>
+					</div>	
+					<div>	
+					<table id="sample-table-1" class="table table-striped table-bordered table-hover" style="width:80%;margin-top:100px;">
+								<thead>
+									<tr>
+										<th class="center" style="color:red;">班级学员</th>
+										<th class="center">学生号:</th>	
+										<th class="center">学生名:</th>
+									</tr>
+								</thead>
+								   
+								<tbody>
+								 <foreach name='list_4' item='vo'>
+									<tr class="center">
+										<td style="border:0px;">{$vo.}</td>
+										<td>{$vo.}</td>
+										<td>{$vo.stuname}</td>											
+									</tr>
+								  </foreach>
+								</tbody>
+							</table>
+
+						</div>
+						
+						
+						
+				</div>
+				<!-- /Contact Info -->
+				<div class="clear"></div>
+
+	  
+
+	

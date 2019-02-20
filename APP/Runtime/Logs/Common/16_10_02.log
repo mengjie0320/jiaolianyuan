@@ -1,0 +1,54 @@
+[ 2016-10-02T09:56:04+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T10:12:41+08:00 ] ::1 /jiaolianyuan/Public/images/share/weixin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T10:12:41+08:00 ] ::1 /jiaolianyuan/Public/images/share/weibo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T10:12:41+08:00 ] ::1 /jiaolianyuan/Public/images/share/tengxunwb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T10:12:41+08:00 ] ::1 /jiaolianyuan/Public/images/share/kongjian.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T10:13:37+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T19:49:58+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T20:17:00+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-02T20:18:14+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+ERR: 无法加载模块:Public
+

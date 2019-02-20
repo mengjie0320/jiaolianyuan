@@ -1,0 +1,107 @@
+
+/********************教练详情部分********************/
+.content {
+	width:1200px;
+	height: 600px;
+	margin:40px auto 40px auto;
+	border:1px solid #e1e1e1;
+	box-shadow: 0 0 8px #e1e1e1;
+	position: relative;
+
+}
+.content .face{
+	width:280px;
+	height: 220px;
+	margin: 10px 0 0 50px;
+	background: #e1e1e1;
+	border: 1px solid #e1e1e1;
+	box-shadow: 0 0 4px #ccc;
+}
+.content .face img{
+	width:220px;
+	height: 220px;
+	padding:0 30px;
+}
+.content>span{
+	position: absolute;
+	top:10px;
+	left: 360px;
+}
+.content .intro{
+	width:790px;
+	height:168px ;
+	position: absolute;
+	top:60px;
+	left: 360px;
+	box-shadow: 0 0 4px #ccc;
+}
+.content .intro span{
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	color:#333;
+	text-indent: 18px;
+	border-bottom: 1px solid #e1e1e1;
+}
+.content .intro p{
+	width:750px;
+	height: 100px;
+	padding:14px 20px;
+	text-indent:30px;
+	font-size: 14px;
+	line-height: 20px;
+}
+.content .detail{
+	width:1180px;
+	height:340px;
+	padding:15px 10px;
+	position: relative;
+}
+.content .detail>span{
+	font-weight: bold;
+	display: block;
+	height: 40px;
+	line-height: 30px;
+	margin-top: 30px;
+}
+.detail .mes_list {
+	overflow: hidden;
+}
+.detail .mes_list li{
+	height: 220px;
+	width:320px;
+	margin: 4px 0;
+	float: left;
+	border: 1px solid #e1e1e1;
+	box-shadow:  0 0 6px #ccc;
+	margin: 20px 35px;
+}
+.detail .mes_list li span{
+	display: block;
+	height: 30px;
+	width:320px;
+	line-height: 30px;
+	font-size: 14px;
+	text-indent: 28px;
+	background: rgba(0,0,0,0.6);
+	float: left;
+	color:#ccc;
+}
+.detail .mes_list li:first-child span{
+	background: rgba(0,0,0,0.6) url(../images/student/coach_detail.png) no-repeat;
+}
+.detail .mes_list li:nth-child(2) span{
+	background: rgba(0,0,0,0.6) url(../images/student/coach_detail.png) no-repeat 0 -30px;
+}
+.detail .mes_list li:last-child span{
+	background: rgba(0,0,0,0.6) url(../images/student/coach_detail.png) no-repeat 0 -60px;
+}
+.detail .mes_list li p{
+	width:260px;
+	height:140px;
+	padding: 20px 20px;
+	text-indent: 20px;
+	font-size: 14px;
+	line-height: 18px;
+	float: left;
+}

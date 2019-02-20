@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="教练缘，教练，课程">
+	<meta name="description" content="教练缘为你量身订制教练学IT!">
+	<title>教练缘-教练中心</title>
+	<link href="__PUBLIC__/CSS/common.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/CSS/student2.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/images/public/logo.ico" rel="icon"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-2.2.1.min.js"></script>
+
+</head>
+<script>
+	window.onload = function(){
+		var go_class = document.referrer ;
+        $("#go_class").attr("href",go_class);
+	};
+	</script>
+<body>
+<div class="top-warp">
+	<div class="top">
+		<a class="logo" href="__MODULE__/Index/index.html">教练缘，企业人才定制与自学平台</a>
+		<if condition="($name neq '') OR ($phone neq '')">
+		 	<div class="card-warp">
+			 	<img src="__PUBLIC__/images/{$face}" >
+				<!--学员头像进入个人中心-->
+				<if condition="($identity eq 'student')">
+				<p class="card">
+					<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+					<a class="learn" href="__MODULE__/Student/student.html">自学中心</a>
+				 	<a class="personal" href="__MODULE__/Student/personal.html">个人中心</a>
+		 			<a class="signout"  href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+			</div>
+	    </if>  
+	</div>
+</div>
+<!--导航-->
+<div class="nav-warp">
+	<ul class="nav">
+		<li><a href="__MODULE__/Index/index.html" target="_parent">首页</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <if condition="($identity neq '') AND ($identity eq 'teacher')">
+        <li><a href="__MODULE__/Coach/coach.html">个人中心</a></li>
+        </if>
+		<if condition="($identity neq '') AND ($identity eq 'student')">
+		<li><a href="__MODULE__/Student/student.html">自学中心</a></li>
+		</if>
+		<if condition="($identity eq '') OR ($identity neq 'student' AND $identity neq 'teacher')">
+		<li><a href="__MODULE__/Login/login.html" onclick="warn()">自学中心</a></li>
+		</if>
+	</ul>
+</div>
+<!--自学流程图-->
+<!--<div class="lear-warp">
+	<div class="lear">
+		
+	</div>
+</div>-->
+<!--主要内容-->
+<div id="main">
+	<!--内容的左边栏-->
+	<div class="main_left">
+    	<ul class="content_list">
+            <li id="items"  class="select"><a href="#">实践项目</a></li>
+            <li id="coach"><a href="#">咨询教练</a></li>
+        </ul>
+    </div>
+
+    <!--内容右边班级的信息-->
+    <div class="main_right">
+	    <ul class="breadcrumb">
+			<li><a  href="__URL__/student.html">班  级</a></li><i></i>
+			<li><a  href="#">{$className}</a></li>
+  		</ul>
+	    <!--项目信息部分-->
+	    <div id="item_content">
+	    	<div id="item_content_bg">
+	    		<if condition ="($projectStatus['done'])">
+	            <span>已完成：</span>
+					<volist name = "projectStatus['done']" id = "projectStatus['done']"  empty = "">
+		                <div>
+		                    <img src="__PUBLIC__/images/student-center-img/finish.png" alt=""/>
+		                    <h3 class="finish"><a href="__URL__/projectDetail/projectId/{$projectStatus['done']['id']}.html">{$projectStatus['done']['name']}</a></h3>
+		                    <b><a href="__URL__/projectDetail/projectId/{$projectStatus['done']['id']}.html">
+		                    	<img src="__PUBLIC__/images/student-center-img/button_finish.png" alt=""/>
+		                    </a></b>
+		                </div>
+		            </volist>  
+	            </if>   
+	            <br> 
+	            <if condition ="($projectStatus['bactive'])">
+	            <span>正在：</span>
+					<volist name = "projectStatus['bactive']" id = "projectStatus['bactive']"  empty = "">
+		                <div>
+		                    <img src="__PUBLIC__/images/student-center-img/geting.png" alt=""/>
+		                    <h3 class="finish"><a href="__URL__/projectDetail/projectId/{$projectStatus['bactive']['id']}.html">{$projectStatus['bactive']['name']}</a></h3>
+		                    <b><a href="__URL__/projectDetail/projectId/{$projectStatus['bactive']['id']}.html">
+		                    	<img src="__PUBLIC__/images/student-center-img/button_geting.png" alt=""/>
+		                    </a></b>
+		                </div>
+		            </volist>  
+	            </if>   
+	            <br>
+	    		<if condition ="(!$projectStatus['unsubmited'])">
+	    			<else/>
+	        		<span>正在：</span>
+	                <div class="doing_item" >
+	                    <!--<img src="__PUBLIC__/images/student-center-img/blue.png" alt="正在进行图标"/>
+	                    <h3><a href="__URL__/projectDetail/projectId/{$doingProjet[0]['id']}">{$unsubmitedProject[0]['name']}</a></h3>
+	                    
+	                    condition="($projectStatus['unsubmited'][0]['declinetime'] neq '0')"-->
+	                    <!--倒计时有待跟时间比较-->
+					    <if condition="($projectStatus['unsubmited'][0]['overtime']) "> 
+					    	<img src="__PUBLIC__/images/student-center-img/would.png" alt="时间到图标"/>
+	                        <h3><a href="__URL__/projectDetail/projectId/{$projectStatus['unsubmited'][0]['id']}.html">{$projectStatus['unsubmited'][0]['name']}</a></h3>
+	                        <a href="#">
+	                        	<img src="__PUBLIC__/images/student-center-img/button_would.png" alt="时间到图标"/>
+	                        </a>
+					    <else />
+					    	<img src="__PUBLIC__/images/student-center-img/ing.png" alt="正在进行图标"/>
+	                        <h3><a href="__URL__/projectDetail/projectId/{$projectStatus['unsubmited'][0]['id']}.html">{$projectStatus['unsubmited'][0]['name']}</a></h3>
+					    	<a href="#">
+					    		<img src="__PUBLIC__/images/student-center-img/button_ing.png" alt="正在进行图标"/>
+					    	</a>
+					    </if>
+	                </div>
+	            </if>
+	            <br>
+	            <if condition ="($projectStatus['audit'])">
+	                <span>正在：</span>
+					<volist name = "projectStatus['audit']" id = "projectStatus['audit']"  empty = "">
+		                <div>
+		                    <img src="__PUBLIC__/images/student-center-img/waiting.png" alt=""/>
+		                    <h3 class="finish"><a href="__URL__/projectDetail/projectId/{$projectStatus['audit']['id']}.html">{$projectStatus['audit']['name']}</a></h3>
+		                    <b><a href="__URL__/projectDetail/projectId/{$projectStatus['audit']['id']}.html">
+		                    <img src="__PUBLIC__/images/student-center-img/button_waiting.png" alt=""/></a></b>
+		                </div>
+		            </volist>
+	            </if>
+	            <br>
+	            <if condition ="($projectStatus['notpass'])">
+	            	<span>正在：</span>
+					<volist name = "projectStatus['notpass']" id = "projectStatus['notpass']"  empty = "">
+		                <div>
+		                    <img src="__PUBLIC__/images/student-center-img/unpass.png" alt=""/>
+		                    <h3 class="finish"><a href="__URL__/projectDetail/projectId/{$projectStatus['notpass']['id']}.html">{$projectStatus['notpass']['name']}</a></h3>
+		                    <b><a href="__URL__/projectDetail/projectId/{$projectStatus['notpass']['id']}.html">
+		                    <img src="__PUBLIC__/images/student-center-img/button_unpass.png" alt=""/></a></b>
+		                </div>
+		            </volist>
+	            </if>
+	            <br>
+	            <!--已完成-->
+	             
+	            <if condition ="($projectStatus['activation'])">   
+	                <!--未完成-->
+	            <span>未完成</span>
+					<volist name = "projectStatus['activation']" id = "projectStatus['activation']" empty = "">
+		                <div>
+	                        <img src="__PUBLIC__/images/student-center-img/unfinish.png" alt=""/>
+		                    <h3 class="not_finish"><a href="#">{$projectStatus['activation']['name']}</a></h3>
+		                    <!--<b><a href="#"></a></b>-->
+		                </div>
+		            </volist>
+	            </if>
+		    </div>
+		</div>
+		    <!--内容右边教练部分-->
+		    <article>
+			    <div class="ques" id="ques">
+			        <ul class="coach_list">
+						<!--学员已选的教练列表-->
+                        <if condition ="($coachesList2[0]['coachprice'] eq '')">   
+							<volist name = "coachesList2" id = "coachesList2" empty = "您暂无教练">
+					            <li>
+					                <!--<a href="__MODULE__/Index2/index2/id/1/identity/student">-->
+					                <!--<a href="#">-->
+					                <a href="__MODULE__/Index2/index2/room_id/{$coachesList2['id']}.html">
+					                    <img src="__PUBLIC__/images/{$coachesList2['face']}" alt=""/>                 
+					                    <h2>{$coachesList2['tname']}</h2>
+					                    <p>{$coachesList2['onlinetime']}</p>
+					                </a>
+					            </li>
+				            </volist>
+			            </if>
+			        </ul>
+			            <!--学员在该班级没有选择，列出可选择的教练-->
+			            <ul class="coach_list" id="vertical">
+			            <if condition ="($coachesList2[0]['coachprice'] neq '')">
+			            	<p  class="tip">您在此班级没有选教练，您可以从以下教练中选择:</p>
+			            	<volist name = "coachesList2" id = "coachesList2" empty = "您暂无教练">
+				            <li>
+			                	<div id="info">
+			                		<img src="__PUBLIC__/images/{$coachesList2['face']}" alt="" width="162" height="162" />
+						            <div class="info">
+						                <ul>
+						                	<li>{$coachesList2['tname']}</li>
+						                    <li>简介：{$coachesList2['tintro']}</li>
+						                     <li><a href="__MODULE__/Detail/coachDetail/id/{$coachesList2['id']}.html">查看教练详情</a></li>
+						                </ul>	
+						            </div>
+						      	</div>
+						      	<h2>{$coachesList2['tname']} <span>教练</span></h2>
+								<p>服务咨询费：￥{$coachesList2['coachprice']}</p>
+								<if condition ="($coachesList2['sex'] eq '0')">
+	                            	<if condition ="($coachesList2['sex'] eq '0')"> <p>性别:男</p></if>
+	                            	<if condition ="($coachesList2['sex'] eq '1')"><p>性别:女</p></if>
+	                            </p>
+	                            <a  href="__MODULE__/Pay/payCenter/classId/{$coachesList2['classid']}/coach/{$coachesList2['id']}.html">
+				                    <input class="button" type="" value="选择此教练"/>
+				                </a>
+				            </li>
+				            </volist>
+				        </if>
+			        </ul>
+			    </div>
+			</article>
+	</div>
+</div>
+
+<!--页面的底部-->
+<div class="footer">
+	<div class="my_footer">
+		<ul class="footer_1">
+			<li><a href="#"></a></li>
+			<li><a href="#" id="weixin"><div class="weixin"></div></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="footer_2">
+				<a href="#">关于我们</a>
+				<a href="#">企业合作</a>
+				<a href="#">人才招聘</a>
+				<a href="#">讲师招募</a>
+				<a href="#">联系我们</a>
+				<a href="#">意见反馈</a>
+				<a href="#">友情链接</a>
+		</div>
+		<div class="footer_3">
+			<p>&copy;&nbsp;2016&nbsp;51jiaolianyuan&nbsp;粤ICP备&nbsp;18689008号</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/student2.js"></script>
+</body>
+</html>

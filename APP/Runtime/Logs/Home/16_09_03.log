@@ -1,0 +1,1861 @@
+[ 2016-09-03T20:23:46+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/projectDetail/projectId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `project` WHERE ( id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0000s ]
+SQL: select * from `class_project` where classId=1 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=1 ) [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 2  [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 2 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 94 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 168 行.
+NOTIC: [8] Use of undefined constant declinetime - assumed 'declinetime' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 171 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 233 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:24:01+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/projectDetail/projectId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `project` WHERE ( id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0010s ]
+SQL: select * from `class_project` where classId=1 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=1 ) [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 2  [ RunTime:0.0010s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 2 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 94 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 168 行.
+NOTIC: [8] Use of undefined constant declinetime - assumed 'declinetime' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 171 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 233 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:24:11+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/projectDetail/projectId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `project` WHERE ( id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0000s ]
+SQL: select * from `class_project` where classId=1 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=1 ) [ RunTime:0.0010s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 2  [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0010s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 2 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 94 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 168 行.
+NOTIC: [8] Use of undefined constant declinetime - assumed 'declinetime' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 171 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 233 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:24:48+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/projectDetail/projectId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `project` WHERE ( id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0010s ]
+SQL: select * from `class_project` where classId=1 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=1 ) [ RunTime:0.0010s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 2  [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0010s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 2 [ RunTime:0.0010s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 94 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 168 行.
+NOTIC: [8] Use of undefined constant declinetime - assumed 'declinetime' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 171 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 233 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:24:58+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT `id`,`cname` FROM `cate`  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 49 行.
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=1 [ RunTime:0.0010s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=2 [ RunTime:0.0000s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=3 [ RunTime:0.0000s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=4 [ RunTime:0.0010s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=5 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `cate` LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`classPic`,`classIntro`,`className` FROM `class` WHERE ( classCate=1 ) LIMIT 3,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:25:03+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/getClassList?cname=Android%E5%B7%A5%E7%A8%8B%E5%B8%88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `cate` WHERE `cName` = 'Android工程师'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className` FROM `class` WHERE ( classCate=2 )  [ RunTime:0.0000s ]
+
+[ 2016-09-03T20:25:04+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 4  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=4) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=4)as a left join student on a.stuId=student.id) [ RunTime:0.0110s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=4) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:25:11+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/selectCoach/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0020s ]
+SQL: SELECT `className`,`id` FROM `class` WHERE `id` = 4  [ RunTime:0.0000s ]
+SQL: select id,tname,sex,face,tIntro,phone,onlineTime from teacher where id in (select teacherId from `teacher_class` where classId =4) [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:25:23+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/student
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `student` WHERE `phone` = '13922035737'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: select class.id,className,classPic,graduateStatus from ((select classId,graduateStatus from `stu_class` where stuId=1 )as a left join `class` on a.classId = class.id ) order by graduateStatus asc [ RunTime:0.0110s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select count(*) from ((select classId,graduateStatus from `stu_class` where stuId=1 )as a left join `class` on a.classId = class.id ) order by graduateStatus asc [ RunTime:0.0100s ]
+SQL: select class.id,className,classPic,graduateStatus from ((select classId,graduateStatus from `stu_class` where stuId=1 )as a left join `class` on a.classId = class.id ) order by graduateStatus asc limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:25:31+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/student2/classId/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 0 and project.id = stu_project.projectid [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=2 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=2 ))  [ RunTime:0.0010s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 2 and project.id = stu_project.projectid [ RunTime:0.0000s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1)and status = 0 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 2 and project.id = work.projectid [ RunTime:0.0000s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 1 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doingProjet D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined index: declinetime D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 106 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 118 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 119 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:25:37+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/projectDetail/projectId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `project` WHERE ( id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0000s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0010s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0000s ]
+SQL: select * from `class_project` where classId=2 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=2 ) [ RunTime:0.0010s ]
+SQL: select * from stu_project where projectid = 1 and stuid = 1 and status = 2  [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 0 [ RunTime:0.0010s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 2 [ RunTime:0.0000s ]
+SQL: select * from work where projectid = 1 and stuid = 1 and status = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 94 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 168 行.
+NOTIC: [8] Use of undefined constant declinetime - assumed 'declinetime' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 171 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\fa400e0e086cac203149c8c53a7c0ae8.php 第 233 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:26:19+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/student2/classId/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 0 and project.id = stu_project.projectid [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=2 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=2 ))  [ RunTime:0.0000s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 2 and project.id = stu_project.projectid [ RunTime:0.0000s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1)and status = 0 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 2 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 1 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0000s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doingProjet D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined index: declinetime D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 106 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 118 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 119 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:26:40+08:00 ] ::1 /jiaolianyuan/index.php/Home/Student/student2/classId/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 0 and project.id = stu_project.projectid [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=2 and projectId not in (select projectId from `stu_project` where stuId =1 and classId=2 ))  [ RunTime:0.0000s ]
+SQL: select project.id,name,requiretime,sense,request,dataUrl,status from `stu_project`,`project` where classid = 2 and stuid = 1 and status = 2 and project.id = stu_project.projectid [ RunTime:0.0000s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1)and status = 0 and project.id = work.projectid [ RunTime:0.0000s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 2 and project.id = work.projectid [ RunTime:0.0010s ]
+SQL: select project.id,remark,remarktime,grade,name,requiretime,sense,request,dataUrl,status from `work`,`project` where projectid in (select projectId from `stu_project` where classId = 2 and stuId = 1 and status = 1) and status = 1 and project.id = work.projectid [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`stuName` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+SQL: select id,tname,face,onlineTime from teacher where id in (select teacherId from `stu_class` where stuId = 1) [ RunTime:0.0010s ]
+SQL: SELECT `id`,`school` FROM `student` WHERE `stuName` = 'xiaopeng'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doingProjet D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 102 行.
+NOTIC: [8] Undefined index: declinetime D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 106 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 118 行.
+NOTIC: [8] Undefined variable: unsubmitedProject D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 119 行.
+NOTIC: [8] Undefined variable: page D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\2b4e34197250fb64d0973edfe0d7b91c.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:27:57+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:27:58+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:27:58+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:28:03+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `teacher` WHERE ( phone='dada' AND password='3a300c48b47b714d9821dc473304aa84'  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `teacher` WHERE ( tname='dada' AND password='3a300c48b47b714d9821dc473304aa84'  ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:28:04+08:00 ] ::1 /jiaolianyuan/index.php/Home/Coach/coach.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `teacher` WHERE `phone` = '01234567893'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\AppServ\www\jiaolianyuan\APP\Home\Controller\CoachController.class.php 第 25 行.
+SQL: SELECT `id`,`address` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=1) [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0010s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=0) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: classList D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\6ea6d7e820064c61d0590d181172a238.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-09-03T20:29:51+08:00 ] ::1 /jiaolianyuan/index.php/Home/Coach/coach.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `teacher` WHERE `phone` = '01234567893'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\AppServ\www\jiaolianyuan\APP\Home\Controller\CoachController.class.php 第 25 行.
+SQL: SELECT `id`,`address` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=1) [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=0) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: classList D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\6ea6d7e820064c61d0590d181172a238.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:30:10+08:00 ] ::1 /jiaolianyuan/index.php/Home/Coach/coach
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `teacher` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `teacher` WHERE `phone` = '01234567893'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\AppServ\www\jiaolianyuan\APP\Home\Controller\CoachController.class.php 第 25 行.
+SQL: SELECT `id`,`address` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0000s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=1) [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `teacher` WHERE `tName` = 'dada'  [ RunTime:0.0010s ]
+SQL: select stuName,face,school from `student` where id in (select stuId from `stu_class` where teacherId=4 and graduateStatus=0) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: classList D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\6ea6d7e820064c61d0590d181172a238.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:30:11+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:30:12+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:30:13+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:30:16+08:00 ] ::1 /jiaolianyuan/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `student` WHERE ( stuName='xiaopeng' AND password='3a300c48b47b714d9821dc473304aa84'  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `student` WHERE ( stuName='xiaopeng' AND password='3a300c48b47b714d9821dc473304aa84'  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `student` WHERE ( phone='xiaopeng' AND password='3a300c48b47b714d9821dc473304aa84'  ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:30:18+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT `id`,`cname` FROM `cate`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 49 行.
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=1 [ RunTime:0.0090s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=2 [ RunTime:0.0010s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=3 [ RunTime:0.0070s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=4 [ RunTime:0.0000s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=5 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `cate` LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`classPic`,`classIntro`,`className` FROM `class` WHERE ( classCate=1 ) LIMIT 3,8   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:30:43+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/search?searchContent=p
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className` FROM `class` WHERE `className` LIKE '%p%' LIMIT 0,5   [ RunTime:0.0530s ]
+
+[ 2016-09-03T20:30:53+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/search?searchContent=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0020s ]
+
+[ 2016-09-03T20:30:59+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:32:29+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:33:17+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:34:20+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:35:46+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:37:23+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:37:58+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:38:17+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:42:49+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:43:45+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:46:49+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-03T20:47:28+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-03T20:47:59+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:48:14+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:49:50+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:50:08+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:50:25+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:50:44+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:50:57+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:51:39+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:53:13+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:53:52+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:55:18+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:55:47+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:56:36+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:57:51+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T20:58:24+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T20:59:06+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T21:00:41+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0010s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0000s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0010s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T21:01:33+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0000s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T21:05:29+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-03T21:05:43+08:00 ] ::1 /jiaolianyuan/index.php/Home/Detail/detail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className`,`classPrice`,`avePeriod`,`classIntro`,`detailPic` FROM `class` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `class_project` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `project` [ RunTime:0.0000s ]
+SQL: SELECT `projectId` FROM `class_project` WHERE `classId` = 1  [ RunTime:0.0010s ]
+SQL: select * from project where id in (select projectId from `class_project` where classId=1) [ RunTime:0.0000s ]
+SQL: select a.stuId,face,stuName,time,content,star from ((select stuId,classId,content,star,time from `stu_class` where content is not null and classId=1)as a left join student on a.stuId=student.id) [ RunTime:0.0010s ]
+SQL: select id,stuName,face from student where id in (select stuId from `stu_class` where classId=1) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+NOTIC: [2] Illegal string offset 'name' D:\AppServ\www\jiaolianyuan\APP\Runtime\Cache\Home\e673543776cc5ec8f086ffb243bb4ad9.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T21:06:14+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 44 行.
+SQL: SELECT `id`,`cname` FROM `cate`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: courseCate D:\AppServ\www\jiaolianyuan\APP\Home\Controller\IndexController.class.php 第 49 行.
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=1 [ RunTime:0.0010s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=2 [ RunTime:0.0010s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=3 [ RunTime:0.0000s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=4 [ RunTime:0.0000s ]
+SQL: select * from (select class.id,className,classIntro,classPic from `class` left join `stu_class` on class.id = classId) as a where id=5 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `cate` LIMIT 0,1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`classPic`,`classIntro`,`className` FROM `class` WHERE ( classCate=1 ) LIMIT 3,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-03T21:29:52+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/getClassList?cname=%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `cate` WHERE `cName` = '前端工程师'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`className` FROM `class` WHERE ( classCate=3 )  [ RunTime:0.0170s ]
+
+[ 2016-09-03T21:29:52+08:00 ] ::1 /jiaolianyuan/index.php/Home/Index/getClassList?cname=Android%E5%B7%A5%E7%A8%8B%E5%B8%88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `cate` WHERE `cName` = 'Android工程师'  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`className` FROM `class` WHERE ( classCate=2 )  [ RunTime:0.0010s ]
+

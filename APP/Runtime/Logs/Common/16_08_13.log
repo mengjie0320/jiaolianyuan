@@ -1,0 +1,18 @@
+[ 2016-08-13T15:15:49+08:00 ] ::1 /jiaolianyuan/index.php/Caoch/coach
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001727s ]
+ERR: 无法加载模块:Caoch
+
+[ 2016-08-13T15:15:54+08:00 ] ::1 /jiaolianyuan/index.php/Caoch/getClassAndStudentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001967s ]
+ERR: 无法加载模块:Caoch
+
+[ 2016-08-13T15:16:04+08:00 ] ::1 /jiaolianyuan/index.php/Coach/getClassAndStudentList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001388s ]
+ERR: 无法加载模块:Coach
+

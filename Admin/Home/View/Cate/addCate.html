@@ -1,0 +1,144 @@
+﻿       
+    <layout name='layout' />
+	  
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Cate/index">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Cate/index">分类管理</a>
+							</li>
+							<li>
+								<a href="__MODULE__/Cate/listC">分类列表</a>
+							</li>
+							<li class="active">添加分类</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+					
+					<script>
+						window.onload=function(){
+								
+								//if($('#stuName').length>0){alert('123')}else{alert('456')};
+								
+									$('#cNo').blur(
+									function() {
+										var cNo = $(this).val();
+										$.post("checkNo", {
+											'cNo' : cNo//前一个username需要跟UserModel对应，即跟数据库字段对应
+										}, function(data) {
+												$('#tooltip1').attr('style','color:red');
+												$('#mess1').html(data);    
+										})
+										return false;
+									  
+									});
+									
+									$('#cName').blur(
+									function() {
+										var cName = $(this).val();
+										$.post("checkName", {
+											'cName' : cName//前一个username需要跟UserModel对应，即跟数据库字段对应
+										}, function(data) {
+												$('#tooltip2').attr('style','color:red');
+												$('#mess2').html(data);    
+										})
+										return false;
+									  
+									});
+									
+									
+									$('#submit1').click(function() {  
+										if ($('#cNo').val() == '') {  
+											 
+											alert($('#cNo').val());  
+											return false;
+										}
+										
+										if ($('#mess1').html() == '分类号已存在！') {  
+											
+											return false;
+										}
+										
+										if ($('#mess2').html() == '分类名称已存在！') {  
+											
+											return false;
+										}
+										
+										var reg = /^\d{3}$/;
+										var str = $('#cNo').val();
+										
+										if (!reg.test(str)) {  
+											$('#mess1').html("分类号不合法,请输3位数字！");  
+											return false;
+										} 
+										
+										if ($('#cName').val() == '') {  
+											$('#mess2').html("分类名不能为空!");  
+											return false;
+										}
+										
+										
+									});
+						}			
+					</script>
+					
+					<form action="add" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1">编　 号：</label>
+						<div class="col-sm-9">
+							<input type="text" name="cNo" id="cNo"  class="col-xs-10 col-sm-5" />
+							<div id="tooltip1" >  
+									<span id="mess1" class="mess"></span>  
+							</div>
+						</div>
+					</div>
+
+				    <div class="space-4"></div>
+						<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">名　　称：</label>
+						<div class="col-sm-9">
+							<input type="text" name="cName" id="cName"  class="col-xs-10 col-sm-5" />
+							<div id="tooltip2" >  
+									<span id="mess2" class="mess"></span>  
+							</div>
+						</div>
+					</div>
+
+					
+					 
+					 
+					
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<button type="submit" name="c12" id="submit1"  class="btn btn-info"">
+								<i class="icon-ok bigger-110"></i>提交</button>
+							
+								
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+			</div>
+                   
+			
+		

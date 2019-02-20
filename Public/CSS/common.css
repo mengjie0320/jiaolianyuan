@@ -1,0 +1,358 @@
+@charset "utf-8";
+/* reset */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{
+	margin:0;
+	padding:0;
+	font-family:"微软雅黑";/*改*/
+	font-weight:normal;
+}
+em{
+	font-style:normal;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none; 
+	vertical-align:top;
+	margin:0;
+}
+table{
+	border-collapse:collapse;
+}
+textarea{ 
+	resize:none;
+	overflow:auto;
+}
+/* end reset */
+/******************页面头部导航*********************/
+.top-warp{
+	background: #FBFBFB;
+	width: 100%;
+	height: 100px;
+	min-width: 1200px;
+}
+.top{
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	top:30px;
+	left:0;
+	display: inline-block;
+	width:300px;
+	height: 40px;
+	background:#FBFBFB url(../images/public/logo.png)no-repeat;
+	text-indent:-5000px;
+}
+/*登录之前的按钮*/
+.login, .register{
+	position: absolute;
+	top:37px;
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	width:50px;
+	font-size: 14px;
+	text-align: center;
+}
+.login{
+	right:56px;
+	color:#999;
+}
+.login:hover{
+	border-radius:14px;
+	color:#fff;
+	background: #22428B;
+}
+.register{
+	right: 0;
+	border-radius:14px;
+	color:#fff;
+	background: #22428B;
+	
+}
+/*登录后头像的显示*/
+/*包住头像和卡片*/
+.card-warp {
+	float:right;
+	margin-top:30px;
+	width:60px;
+	height:60px;
+	border-radius: 50%;
+}
+.card-warp img{
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	right:10px;
+	top:30px;	
+}
+.card-warp>img:hover{
+	box-shadow: 0 0 8px #22428B;
+}
+/*显示用户名和退出*/
+/*箭头*/
+.card .card-arrow{
+	border-width: 0 9px 10px;
+	border-style: solid;
+	border-color:transparent transparent #22428B;
+	position: absolute;
+	top:-10px;
+	right:16px;
+}
+.card{
+	position: absolute;
+	right:2px;
+	top:86px;
+	width:180px;
+	font-size: 14px;
+	z-index: 1000;
+	background: #fff;
+	box-shadow: 1px 2px 4px #ccc;
+	border-radius:6px;
+	display: none;
+}
+.card a{
+	color:#666;
+	font-size: 14px;
+}
+.card-warp:hover .card{
+	display: block;
+ }
+ /*用户名和头像*/
+.card .user{
+ 	display: block;
+ 	width:180px;
+ 	height: 80px;
+ 	line-height: 80px;
+ 	background:#22428B ;
+ 	border-top-left-radius:6px ;
+ 	border-top-right-radius:6px ;
+ }
+ .user img{
+ 	position: absolute;
+ 	top:16px;
+ 	left:8px;
+ 	border: 2px solid #fff;
+ 	height: 46px;
+	width: 46px;
+	text-align: center;
+ } 
+.user strong{
+	font-size: 16px;
+  	color:#fff;
+  	padding-left:80px;
+}
+/*自学中心*/
+.learn{
+	display: block;
+	text-align: center;
+	width:180px;
+	height:40px ;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+ }
+ .learn:hover{
+ 	background: #FBFBFB;
+ 	font-size: 16px;
+ 	color:#22428B;
+ }
+ /*个人中心和退出*/
+.personal{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	text-indent: 10px;
+	display: block;
+}
+.signout{
+	position: absolute;
+	bottom:4px;
+	right:10px;
+}
+.personal:hover,.signout:hover{
+	color:#22428B;
+}
+/**************导航栏*****************/
+.nav-warp{
+	height: 36px;
+	width:100%;
+	background: #fbfbfb;
+	border: 1px solid #e7e7e7;
+	box-shadow: 0 1px 1px #e7e7e7;
+	min-width: 1200px;
+}
+.nav{
+	width:1200px;
+	height: 36px;
+	margin: 0 auto;
+}
+.nav li{
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	padding-right: 46px;
+}
+.nav li a{
+	font-size: 14px;
+	color:#777;
+}
+.nav li a:hover{
+	color:#22328B;
+}
+
+/********************自学流程图********************/
+.lear-warp{
+	width:100%;
+	min-width: 1200px;
+	height: 160px;
+}
+.lear{
+	width:1200px;
+	height: 160px;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.2);
+	position: relative;
+}
+
+/*****************页脚****************/
+.dataTables_paginate {
+	position: relative;
+	top:40px;
+	left: 47%;
+	margin:40px auto;
+	height: 30px;
+	
+}
+.pagination{
+	height: 30px;
+	margin-bottom: 30px;
+}
+.pagination li {
+	margin: 0 auto;
+	line-height: 30px;
+	width:auto;
+	height: 30px;
+	margin-right: 8px;
+	float: left;
+}
+.paginate_button  a{ 
+	display:inline-block; 
+	height:30px;
+	line-height:30px; 
+	padding:0 10px; 
+	color:#000; 
+	text-decoration:none; 
+	font-size:12px;
+	border-radius:2px;
+	box-shadow:0 2px 6px #CCC;
+	-moz-box-shadow:0 2px 6px #CCC;
+	-webkit-box-shadow:0 2px 6px #CCC;
+}
+.paginate_button a:hover,.pagination .active  a{ 
+	color:#fff; 
+	background:#22428B;
+}
+/********************页面底部********************/
+.footer{
+	width:100%;
+	height: 230px;
+	margin-top:46px;
+	float: left;
+	min-width: 1200px;
+}
+.footer .my_footer{
+	width:1200px;
+	height: 170px;
+	padding:30px 0;
+	margin: 0 auto;
+}
+.footer .footer_1{
+	height: 56px;
+	width:248px;
+	margin: 0 auto;
+}
+.footer .footer_1 li{
+	float: left;
+	height: 32px;
+	width:32px;
+	padding:12px 14px;
+	position: relative;
+}
+.footer .footer_1 li a{
+	display: block;
+	width:32px;
+	height: 32px;
+}
+.footer .footer_1 li:first-child a{
+	background: url(../images/public/bottom_icon.png) no-repeat;
+}
+.footer .footer_1 li:first-child a:hover{
+	background: url(../images/public/bottom_icon.png) no-repeat -32px 0;
+}
+.footer .footer_1 li:nth-child(2) a{
+	background: url(../images/public/bottom_icon.png) no-repeat 0 -33px;
+}
+.footer .footer_1 li:nth-child(2) a:hover{
+	background: url(../images/public/bottom_icon.png) no-repeat -32px -33px;
+}
+.footer .footer_1 li .weixin{
+	width:162px;
+	height: 210px;
+	position: absolute;
+	top:-210px;
+	left:-50px;
+	z-index: 100;
+	display: none;
+	background: url(../images/public/code.png) no-repeat;
+}
+.footer .footer_1 li:nth-child(2) a:hover .weixin{
+	display:block;
+}
+.footer .footer_1 li:nth-child(3) a{
+	background: url(../images/public/bottom_icon.png) no-repeat 0 -65px;
+}
+.footer .footer_1 li:nth-child(3) a:hover{
+	background: url(../images/public/bottom_icon.png) no-repeat -32px -65px;
+}
+.footer .footer_1 li:last-child a{
+	background: url(../images/public/bottom_icon.png) no-repeat 0 -97px;
+}
+.footer .footer_1 li:last-child a:hover{
+	background: url(../images/public/bottom_icon.png) no-repeat -32px -97px;
+}
+.footer_2{
+	margin-top:30px;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px dotted #46484D;
+	text-align: center;
+	display: block;
+	padding-bottom: 20px;
+}
+
+.footer_2 a{
+	font-size: 14px;
+	margin: 0 10px;
+	color: #999;
+}
+.footer_2 a:hover{
+	color: #09f;
+}
+.footer_3{
+	width: 100%;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	padding: 8px 0 25px;
+}

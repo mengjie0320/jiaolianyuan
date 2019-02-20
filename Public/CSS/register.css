@@ -1,0 +1,305 @@
+﻿@CHARSET "UTF-8";
+
+/****************reset****************/
+body,h1,h2,h3,h4,h5,h6,p,form,input{
+	margin:0;
+	padding:0;
+}
+b{
+	font-weight:normal;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none; 
+	vertical-align:top;
+}
+
+/****************end reset****************/
+
+/****************register****************/
+body{
+	font-family:"微软雅黑";
+}
+#logo{
+	width:960px;
+	height:80px;
+	margin:0 auto;
+	position:relative;
+}
+#logo img{
+	position:absolute;
+	left:0;
+	top:20px;
+}
+#warp {
+	width:100%;
+	height:600px;
+	z-index:1;
+	background:#334454;
+	min-width:1200px;
+}
+#bg-pic{
+	height:600px;
+	width:988px;
+	margin:0 auto;
+	z-index:2;
+	background:url(../images/login-reg-img/bg-pic.jpg) no-repeat;
+	position:relative;
+	top:40px;
+	left:-50px;
+}
+/*注册框*/
+#register{
+	height:510px;
+	float:right;
+	width:348px;
+	position:relative;
+	top:10px;
+	z-index:3;
+	background:#F2F2F2;
+	border:1px solid #e1e1e1;
+	border-radius:10px;
+}
+.register-form h2{
+	height:36px;
+	width:180px;
+	line-height:36px;
+	color:#666;
+	position:relative;
+	top:12px;
+	left:20px;
+	font-weight:normal;
+}
+.register-form b{
+	position:absolute;
+	top:20px;
+	right:68px;
+	color:#666;
+	font-size:14px;
+}
+.register-form a{
+	color:#09f;
+	font-size:12px;
+	float:right;
+	position:absolute;
+	top:22px;
+	right:20px;	
+}
+.register-form a:hover,.clause a:hover{
+	text-decoration:underline;
+	color:#55A7FC;
+}
+
+.register-box{
+	width:310px;
+	height:38px;
+	position:relative;
+	top:0px;
+	left:0;
+	border-radius:5px;
+	margin:34px auto 0  auto;
+}
+
+/*提示手机号码未注册信息*/
+#checkRemind,#checkRealName{
+	margin-top: 2px;
+	color: #666;
+	font-size: 14px;
+	text-indent:10px;
+	letter-spacing: 2px;
+}
+#checkRealName{
+	position: absolute;
+	top:258px;
+	text-indent:30px;
+	
+}
+/*注册信息输入框（用户名、密码）*/
+.register,.pwd{
+	border:1px solid #e1e1e1;
+	background:none;
+	outline:none;
+	width:302px;
+	font-size:14px;
+	color:#666;
+	padding:10px 0 10px 8px;
+	border-radius:5px;
+}
+.register:hover,.pwd:hover,.codes:hover{
+	border:1px solid #09F;
+	box-shadow:0 0 6px #09f;
+}
+.register:focus,.pwd:focus,.codes:focus{
+	background:#E1E1E1;
+}
+/*验证码*/
+.codes-box{
+	width:200px;
+	height:36px;
+	border-radius:5px;
+	position:relative;
+	top:28px;
+	left:20px;
+	margin-bottom:16px;
+}
+.codes{
+	border:1px solid #e1e1e1;
+	padding:10px 0 10px 8px;
+	background:none;
+	outline:none;
+	width:192px;
+	font-size:14px;
+	color:#666;
+	border-radius:5px;
+}
+/*发送验证码按钮*/
+#codes-btn{
+	position:absolute;
+	top:136px;
+	right:16px;
+	height:40px;
+	width:104px;
+	border:1px solid #e1e1e1;
+	color:#666;
+	border-radius:3px;
+	line-height:36px;
+	cursor:pointer;
+	background: #ccc;
+	font-size: 12px;
+}
+#codes-btn:hover{
+	color:#09f;
+}
+#checkPhoneCode{
+	position: absolute;
+	right:2px;
+	top:10px;
+	width:20px;
+	height: 20px;
+}
+#showText{
+	position: absolute;
+	top:178px;
+	left:20px;
+	color: #999;
+	font-size: 14px;
+}
+#showText span{
+	color:#FA0001;
+	font-size: 16px;
+	font-weight: bold;
+}
+/*用户名框*/
+.register-box #real-name{
+	position :absolute;
+	top:40px;
+}
+/*设置密码*/
+.register-box #set-pwd{
+	position: absolute;
+	bottom:-36px;
+}
+.register-box #confirm-pwd{
+	position: absolute;
+	bottom:-10px;
+}
+/*单选框*/
+.checked{
+	position:relative;
+	top:2px;
+	left:0px;
+}
+.checked-1,.checked-2{
+	height:25px;
+	line-height:25px;
+	width:70px;
+	position:relative;
+	color:#666;
+	font-size:14px;
+	display:block;
+	letter-spacing:2px;
+}
+.checked-1{
+	top:24px;
+	left:20px;
+}
+.checked-2{
+	text-align:right;
+	right:18px;
+	float:right;
+	top:0px;	
+}
+/*注册按钮*/
+#register-btn{
+	position:relative;
+	top:20px;
+	left:20px;
+	margin:-10px auto;
+	width:304px;
+	height:44px;
+	background: url(../images/login-reg-img/register-btn.gif) no-repeat 0 0;
+	border-radius:6px;
+	cursor:pointer;
+	border:none;
+}
+#register-btn:hover{
+	background-position: -306px 0;
+}
+/*同意协议*/
+.clause{
+	position:relative;
+	top:36px;
+	left:20px;
+	font-size:12px;
+	font-family:"宋体";
+	color:#666;
+}
+.agree-clause{
+	position:relative;
+	top:3px;
+	left:0px;
+}
+.clause a{
+	color:#097BF8;
+}
+
+/*页脚*/
+.footer{
+	height:60px;
+	width:100%;
+	margin:80px auto 20px;
+	border-top:1px double #666;
+	min-width:1200px
+	
+}
+.foot-ali{
+	width:565px;
+	font-size:14px;
+	padding:10px 0 10px 0;
+	margin:-22px  auto;
+	border-radius:2px;
+	background:#e1e1e1;
+
+}
+.foot-ali b{
+	color:#333;
+	font-weight:normal;
+	margin:0px;
+	font-size:14px;
+	text-align:center;
+}
+.foot-ali a{
+	color:#666;
+	text-decoration:none;
+	padding:10px 14px;	
+
+}
+.foot-ali a:hover{
+	background:#09F;
+	color:#fff;
+}
+
+
+/****************end register****************

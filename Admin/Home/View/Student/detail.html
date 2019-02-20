@@ -1,0 +1,83 @@
+			<layout name='layout' />
+					
+					<ul class="breadcrumb" style="line-height:50px;">
+							<li>
+								<i class="icon-home home-icon"></i>
+								首页
+							</li>
+
+							<li>
+								用户管理
+							</li>
+							<li><a href="__MODULE__/Student/index">学员管理</a></li>
+							<li class="active">学员详情</li>
+							
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+
+				<div class="page-header">
+							
+							</h1>
+						</div><!-- /.page-header -->
+			
+				<div  style="margin-left:5px;font-size:20px;">
+					<!--<h3 class="main-heading"><span>Contact info</span></h3>-->
+
+					<ul style=" list-style-type:none;">
+						<foreach name='list_1' item='vo'>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-user">			</i> 姓　　名:</span>　 {$vo.stuname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-barcode">			</i> 学　　号:</span>　 {$vo.stuno}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-star">		</i> 性　　别:</span>　 {$vo.sex}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-envelope">			</i> 年　　龄:</span>　 {$vo.stuname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-phone">	</i> 联系方式:</span>　 {$vo.phone}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon  glyphicon-flag">	</i> 所在学校:</span>　 {$vo.school}</li>
+						<li style="padding:10px 10px 50px 10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-check">		</i> 注册时间:</span>　 {$vo.regtime}</li>
+						</foreach>
+						</ul>
+
+						<ul style=" list-style-type:none;">
+						<foreach name='list_3' item='vo'>
+						<if condition="$vo['status'] eq '0'">
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;">
+						<span style="float:left;font-weight:700;"><i class="glyphicon glyphicon-home"></i> 在学班级:</span>
+						<span style="float:left;margin-left:20px;display:block;width:250px;">{$vo.classname}</span>
+						<span style="font-weight:700;"><i class="glyphicon glyphicon-book"></i> 在学项目:</span>　 {$vo.projectname}
+						</li>
+						
+						<li style="padding:10px 10px 50px 10px;border-bottom:1px solid #F2F2F2;">
+						<span style="float:left;font-weight:700;"><i class="glyphicon glyphicon-time"></i> 剩余时间:</span>
+						<span style="float:left;margin-left:20px;display:block;width:250px;">{$vo.declinetime}</span><span style="font-weight:700;"><i class="glyphicon glyphicon-user"></i> 教练姓名:</span>　 {$vo.tname}
+						</li>
+						<else />
+
+						</if>
+						</foreach>
+						</ul>
+
+						
+						<ul style=" list-style-type:none;">
+						<foreach name='list_2' item='vo'>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;">
+						<span style="float:left;font-weight:700;"><i class="glyphicon glyphicon-unchecked"></i> 已学班级:</span>
+						<span style="float:left;margin-left:20px;display:block;width:250px;">{$vo.classname}</span>
+						<span style="font-weight:700;"><i class="glyphicon glyphicon-unchecked"></i>已学项目:</span>　 {$vo.projectname}</li>
+					
+						</foreach>
+						</ul>
+				</div>
+				<!-- /Contact Info -->
+				<div class="clear"></div>
+
+	  
+
+	

@@ -1,0 +1,313 @@
+﻿       
+    <layout name='layout' />
+	  
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								首页
+							</li>
+
+							<li>
+								用户管理
+							</li>
+							<li><a href="__MODULE__/Student/index">学员管理</a></li>
+							<li class="active">添加学员</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+<!-- 					<script type="text/javascript">
+
+	//创建ajax引擎
+	function getXmlHttpObject(){
+		
+		var xmlHttpRequest;
+		//不同的浏览器获取对象xmlhttprequest 对象方法不一样
+		if(window.ActiveXObject){
+			
+			xmlHttpRequest=new ActiveXObject("Microsoft.XMLHTTP");
+			
+		}else{
+
+			xmlHttpRequest=new XMLHttpRequest();
+		}
+
+		return xmlHttpRequest;
+
+	}
+	var myXmlHttpRequest="";
+
+	//验证用户名是否存在
+	function checkName(){
+		
+		myXmlHttpRequest=getXmlHttpObject();
+
+		//怎么判断创建ok
+		if(myXmlHttpRequest){
+			
+			//通过myXmlHttpRequest对象发送请求到服务器的某个页面
+			//第一个参数表示请求的方式, "get" / "post"
+			//第二个参数指定url,对哪个页面发出ajax请求(本质仍然是http请求)
+			//第三个参数表示 true表示使用异步机制,如果false表示不使用异步
+			var url="add?mytime="+new  Date()+"&form-field-1="+$("form-field-1").value;
+			//打开请求.
+			myXmlHttpRequest.open("get",url,true);
+			//指定回调函数.chuli是函数名
+			myXmlHttpRequest.onreadystatechange=chuli;
+
+			//真的发送请求,如果是get请求则填入 null即可
+			//如果是post请求，则填入实际的数据
+			myXmlHttpRequest.send(null); 
+
+
+		}
+		
+		
+	}
+
+	//回调函数
+	function chuli(){
+		
+		//window.alert("处理函数被调回"+myXmlHttpRequest.readyState);
+		//我要取出从registerPro.php页面返回的数据
+		if(myXmlHttpRequest.readyState==4){
+			
+			//取出值,根据返回信息的格式定.text
+			//window.alert("服务器返回"+myXmlHttpRequest.responseText);
+
+			$('myres').value=myXmlHttpRequest.responseText;
+		}
+	}
+
+	//这里我们写一个函数
+	function $(id){
+		return document.getElementById(id);
+	}
+</script> -->
+
+
+<script>
+window.onload=function(){
+		
+		//if($('#stuName').length>0){alert('123')}else{alert('456')};
+		 
+		
+		$('#stuNo').blur(
+            function() {
+                var stuNo = $(this).val();
+                $.post("checkName", {
+                    'stuNo' : stuNo//前一个username需要跟UserModel对应，即跟数据库字段对应
+                }, function(data) {
+ 
+                        $('#tooltip1').attr('style','color:red');
+                        $('#mess1').html(data);    
+                })
+                return false;
+			  
+            });
+			
+			$('#stuName').blur(
+            function() {
+                var stuName = $(this).val();
+                if(stuName == ""){$('#mess3').html("用户名不能为空！");}
+				else{ 
+					$('#mess3').html("");  
+				} 
+            });
+			$('#password').blur(
+            function() {
+                var password = $(this).val();
+                if(password == ""){$('#mess2').html("密码不能为空！");}
+				else{ 
+					$('#mess2').html("");  
+				} 
+            });
+			$('#school').blur(
+            function() {
+                var school = $(this).val();
+                if(school == ""){$('#mess4').html("学校不能为空！");}
+				else{ 
+					$('#mess4').html("");  
+				} 
+            });
+			$('#phone').blur(
+            function() {
+                var phone = $(this).val();
+                if(phone == ""){$('#mess5').html("电话不能为空！");}
+				else{ 
+					$('#mess5').html("");  
+				} 
+            });
+			$('#regTime').blur(
+            function() {
+                var regTime = $(this).val();
+                if(regTime == ""){$('#mess6').html("注册时间不能为空！");}
+				else{ 
+					$('#mess6').html("");  
+				} 
+            });
+			
+			$('#submit1').click(function() {  
+				if ($('#stuNo').val() == '') {  
+					$('#tooltip1').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess1').html("用户名不能为空!");  
+					return false;
+				}
+				
+				if ($('#mess1').html() == '用户已存在！') {  
+					
+					return false;
+				}
+				
+				var reg = /^\d{4}$/;
+				var str = $('#stuNo').val();
+				
+				if (!reg.test(str)) {  
+					$('#mess1').html("用户名不合法,请输4位数字！");  
+					return false;
+				} 
+				
+				if ($('#stuName').val() == '') {  
+					$('#tooltip3').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess3').html("姓名不能为空!");  
+					return false;
+				}
+				
+				if ($('#password').val() == '') {  
+					$('#tooltip2').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess2').html("密码不能为空!");  
+					return false;
+				}
+				if ($('#school').val() == '') {  
+					$('#tooltip4').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess4').html("学校不能为空!");  
+					return false;
+				}
+				if ($('#phone').val() == '') {  
+					$('#tooltip5').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess5').html("电话不能为空!");
+					return false;					
+				}
+				
+				var reg2 = /^\d{11}$/;
+				var str2 = $('#phone').val();
+				
+				if (!reg2.test(str2)) {  
+					$('#mess5').html("电话号不合法,请输11位手机号！");  
+					return false;
+				} 
+				
+				if ($('#regTime').val() == '') {  
+					$('#tooltip6').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess6').html("注册时间不能为空!"); 
+					return false;					
+				}
+				
+			});
+}			
+</script>
+					<form action="add" method="post" class="form-horizontal" role="form">
+					
+					
+					
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1">学　　号：</label>
+						<div class="col-sm-9">
+						<input type="text" name="stuNo" id="stuNo"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip1" >  
+							<span id="mess1" class="mess"></span>  
+						</div>
+						</div>
+					</div>
+
+					<div class="space-4"></div>
+						<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">姓　　名：</label>
+						<div class="col-sm-9">
+						<input type="text" name="stuName" id="stuName"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip3" style="">  
+							<span id="mess3" class="mess"></span>  
+						</div>
+						</div>
+					</div>
+					
+				    <div class="space-4"></div>
+						<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">密　　码：</label>
+						<div class="col-sm-9">
+						<input type="password" name="password" id="password"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip2" style="">   
+							<span id="mess2" class="mess"></span>  
+						</div>  
+						</div>
+					</div>
+
+					
+					
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">所在学校：</label>
+						<div class="col-sm-9">
+						<input type="text" name="school" id="school"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip4" >  
+							<span id="mess4" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+	
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">联系电话：</label>
+						<div class="col-sm-9">
+						<input type="text" name="phone" id="phone"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip5" >  
+							<span id="mess5" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+					 
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">注册时间：</label>
+						<div class="col-sm-9">
+						<input type="date" name="regTime" id="regTime"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip6" >  
+							<span id="mess6" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+					 
+					 
+					
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<!-- <button class="btn btn-info" type="button">
+									
+									<input type="submit" value="提交">
+								</button> -->
+							<button type="submit" name="c12" id="submit1"  class="btn btn-info"">
+								<i class="icon-ok bigger-110"></i>提交</button>  
+										
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+			</div>
+                   
+			
+		

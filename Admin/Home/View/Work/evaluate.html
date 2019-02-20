@@ -1,0 +1,194 @@
+﻿				<layout name='layout' />
+				
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Work/index">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Work/index">批阅中心</a>
+							</li>
+							<li>
+								<a href="__MODULE__/Work/index">未批阅项目列表</a>
+							</li>
+							<li class="active">批阅</li>
+							
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+		         
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+					
+					<foreach name='content' item='vo'>
+					</foreach>
+					<foreach name='content2' item='vo'>
+					</foreach>
+					
+					<form action="evaluate" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">ID：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="id" id="form-input-readonly" value="{$vo.id}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">学生姓名：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="stuName" id="form-input-readonly" value="{$vo.stuname}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">就读班级：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="className" id="form-input-readonly" value="{$vo.classname}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">项目名称：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="name" id="form-input-readonly" value="{$vo.name}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">提交时间：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="submitTime" id="form-input-readonly" value="{$vo.submittime}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">完成用时：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="finishedTime" id="form-input-readonly" value="{$vo.finishedtime}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+				    <div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">评阅内容：</label>
+
+						<div class="col-sm-9">
+						<textarea rows="10" cols="51" name="remark" value="{$vo.remark}" >{$vo.remark}</textarea>
+						</div>
+					</div>
+
+					<div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">评阅时间：</label>
+
+						<div class="col-sm-9">
+						<input type="date" name="remarkTime" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.remarktime}" />
+						</div>
+					</div>
+					
+					<div class="space-4"></div>
+
+					<div id="status" class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">批阅成绩：</label>					
+						　
+						  　<input type="radio" name="rank" value="0"/>&nbspA		　　
+						  　<input type="radio" name="rank" value="1"/>&nbspB		　　
+						  　<input type="radio" name="rank" value="2"/>&nbspC		　　
+						  　<input type="radio" name="rank" value="3"/>&nbspD	　　
+						  　<input type="radio" name="rank" value="4"/>&nbspE
+							　　
+					   <script>
+					   $(":radio").click(
+							function() {
+						if($(this).val() != "4"){$("[name=status]").val("1")};	
+						if($(this).val() == "4"){$("[name=status]").val("2")};
+						})
+						</script>
+						<input type="hidden" name="status" value="">　　　
+						  <!-- <script>
+						  window.onload = function (){
+							var oSt = document.getElementsByName('status');
+							var oSt2 = document.getElementsByName('status2');
+							var oDiv = document.getElementById('status');
+								for (var i=0;i<oSt.length;i++){
+								  for (var j=0;j<oSt2.length;j++){
+									if(oSt[i].value == oSt2[i].value){
+								    oDiv.style.display = "none";}
+								 }
+							  }
+							 }
+						  
+						  </script> -->
+					</div>
+					   
+				       
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info" type="submit">
+									<i class="icon-ok bigger-110"></i>
+									提交
+								</button>
+							
+								
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+						
+						<input type="hidden" name="stuId" value="{$vo.stuid}" />
+						<input type="hidden" name="classId" value="{$vo.classid}" />
+					</form>
+			</div>

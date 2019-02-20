@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="教练缘，教练，课程">
+	<meta name="description" content="教练缘为你量身订制教练学IT!">
+	<title>教练缘-班级详情</title>
+	<link href="__PUBLIC__/CSS/common.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/CSS/detail.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/images/public/logo.ico" rel="icon"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-2.2.1.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/js/detail.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/scroll.js"></script>
+	<script type="text/javascript">
+//$(function(){
+//	$('.move-list li:even').addClass('lieven');
+//	
+//	$("div.move-list").myScroll({
+//		speed:40, //数值越大，速度越慢
+//		rowHeight:56 //li的高度
+//	});
+//	
+//})
+</script>
+</head>
+<body>
+<!--导航栏-->
+<div class="top-warp">
+	<div class="top">
+		<a class="logo" href="__MODULE__/Index/index.html">教练缘，企业人才定制与自学平台</a>
+		<if condition="($name neq '') OR ($phone neq '')">
+		 	<div class="card-warp">
+			 	<img src="__PUBLIC__/images/{$face}" >
+			 	<!--教练头像进入个人中心-->
+			    <if condition="($identity eq 'teacher')">
+			    <p class="card">
+			    	<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+				 	<a class="personal" href="__MODULE__/Coach/coach.html">个人中心</a>
+		 			<a class="signout" href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+				<!--学员头像进入个人中心-->
+				<if condition="($identity eq 'student')">
+				<p class="card">
+					<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+					<a class="learn" href="__MODULE__/Student/student.html">自学中心</a>
+				 	<a class="personal" href="__MODULE__/Student/personal.html">个人中心</a>
+		 			<a class="signout"  href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+			</div>
+		 	<else />
+				<a class="login"  href="__MODULE__/Login/login">登录</a>
+				<a class="register" href="__MODULE__/Register/register">注册</a>
+	    </if>  
+	</div>
+</div>
+<!--导航-->
+<div class="nav-warp">
+	<ul class="nav">
+		<li><a href="__MODULE__/Index/index.html" target="_parent">首页</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <if condition="($identity neq '') AND ($identity eq 'teacher')">
+        <li><a href="__MODULE__/Coach/coach.html">个人中心</a></li>
+        </if>
+		<if condition="($identity neq '') AND ($identity eq 'student')">
+		<li><a href="__MODULE__/Student/student.html">自学中心</a></li>
+		</if>
+		<if condition="($identity eq '') OR ($identity neq 'student' AND $identity neq 'teacher')">
+		<li><a href="__MODULE__/Login/login.html" onclick="warn()">自学中心</a></li>
+		</if>
+	</ul>
+</div>
+
+<!--班级的详情-->
+<div id="class_detail_warp">
+	<div id="class_detail">
+	    <if condition="($classBasicInfo[0]['classpic'] eq '')">
+    		<img src="__PUBLIC__/images/student/nopic.png" alt="班级图片" width="585" height="324" />
+	    </if>
+	    <if condition="($classBasicInfo[0]['classpic'] neq '')">
+    		<img src="__PUBLIC__/images/{$classBasicInfo[0]['classpic']}" alt="班级图片" width="585" height="324" />
+    	</if>
+       		<h2>{$classBasicInfo[0]['classname']}</h2>
+        <p>
+        	<h3 class="period">平均学习周期：{$classBasicInfo[0]['aveperiod']}天</h3>
+        <!--<span>班级价格:{$classBasicInfo[0]['classprice']}元</span>-->
+         	<h3 class="item_num">实践项目个数：<span><?php echo count($ProjectInfo)  ?></span></h3>
+        	<h3 class="class_price">班级价格：<span class="price">￥{$classBasicInfo[0]['classprice']} 元</span></h3>
+        <!--<span>班级价格:{$classBasicInfo[0]['classprice']}元</span>
+        <span>实战项目个数:<?php echo count($ProjectInfo)  ?></span>-->
+        </p>
+         <!--如果是学生则按钮显示立即参加，若为教练，则显示申请成为教练-->
+          <!--学生未选该班级且班级价格不为0-->
+        <if condition="($identity neq '' AND $ifSelect eq '400') AND ($identity eq 'student')"><a href="__MODULE__/Pay/payCenter/classId/{$classBasicInfo[0]['id']}.html">立即参加</a></if>
+         
+         <!--学生未选该班级且班级价格为0-->
+        <if condition="($identity neq '' AND $ifSelect eq '400') AND ($identity eq 'student') AND ($classBasicInfo[0]['classprice'] eq '0')"><a  onclick="confirm('此班级为免费,点击马上参加即可选择该班级')?location.href='__MODULE__/Pay/freePay/id/{$classBasicInfo[0]['id']}.html':''" href="javascript:;">马上参加</a></if>
+          <!--学生已选该班级-->  <!--学生已选该班级-->
+        <if condition="($identity neq '' AND $ifSelect eq '200') AND ($identity eq 'student')"><a href="__MODULE__/Student/student2/classId/{$classBasicInfo[0]['id']}.html">进入班级</a></if>
+        
+        <!--教练登录-->
+        <if condition="($identity neq '') AND ($identity eq 'teacher')"><a href="__MODULE__/Coach/coachProve/id/{$classBasicInfo[0]['id']}.html">申请成为教练</a></if>
+        
+        <!--如果是游客？ ？  ？-->
+        <if condition="($identity eq '')"><a href="__MODULE__/Detail/selectCoach/id/{$classBasicInfo[0]['id']}.html">立即参加</a></if>
+    </div>
+</div>
+
+<!--班级介绍-->
+<div id="class_intro_warp">
+	<div id="class_intro">
+    	<h3>班级介绍：</h3>
+    	<p>{$classBasicInfo[0]['classintro']}</p>
+    </div>
+</div>
+
+<!--班级其他信息-->
+<div id="class_oth">
+	<div id="learn_req">
+    	<div class="notice-tit" id="notice-tit">
+    		<ul>
+    			<li class="select"><a href="javascript:;">实践项目</a></li>
+    			<li><a href="javascript:;">学习成果</a></li>
+    		</ul>
+    	</div>
+    	<div class="notice-child" id="notice-child">
+    		<div class="notice_con" style="display: block;">
+    			<ul>
+					<volist name = "ProjectInfo" id = "ProjectInfo" empty = "此班级暂无项目">
+		    			<li id="{$ProjectInfo['id']}" class="show-div"><a href="javascript:;">
+		    				{$ProjectInfo['name']|html_entity_decode}</a>
+		    			</li>
+	    			</volist>
+    			</ul>
+    		</div>
+    		<div class="notice_con" style="display: none;">
+    			<ul>
+    				<li><a href="javascript:;">暂无</a></li>
+    			</ul>
+    		</div>
+    	</div>
+		<volist name = "ProjectInfo2" id = "ProjectInfo2" empty = "无项目简介">
+			<div id="display{$ProjectInfo2['id']}" class="show-box">
+				<div  class="heading_title">
+					<span>{$ProjectInfo2['name']|html_entity_decode}</span><a href="#" class="close"></a>
+				</div>
+				<div class="main-content">
+					<p>{$ProjectInfo2['sense']|html_entity_decode}</p>
+				</div>
+			</div>
+		</volist>
+		<div id="cover"></div>
+    </div>
+    <div id="side_bar">
+    	<div id="class_eval">
+        	<h4>评价</h4>
+        	<div class="move-list">
+        		<ul class="eval_list">
+            	<!--循环遍历评论的数据,目前有姓名，头像-->
+				    <volist name = "contentData" id = "contentData" empty = "暂无评论">
+		            	<li>
+		                    <a href="#"><img src="__PUBLIC__/images/{$contentData['face']}" height="28" width="28"alt=""/></a>
+		                    <span class="user_name">{$contentData['stuname']}</span><span class="date">{$contentData['time']}</span>
+		                    <p class="star"><?php for($i=0;$i<$contentData['star'];$i++){echo "☆";}?></p>
+		                    <p class="eval_txt">{$contentData['content']}</p>
+		                </li>
+	                </volist>
+            	</ul>
+        	</div>
+        </div>
+        <div id="class_num">
+        	<h4><?php echo count($studentData2);?>人在选择该班级</h4>
+        	<div id="wai_box">
+			<div class="zzsc_box">	
+            <ul class="user_list">
+			    <volist name = "studentData2" id = "more"  offset="0" length='12' empty = "暂无数据"><!--循环遍历第二个框的姓名，头像-->
+	            	<li>
+	                    <a href="#"><img src="__PUBLIC__/images/{$more['face']}" width="54" height="54" alt=""/></a>
+	                    <span class="user_name">{$more['stuname']}</span>
+	                </li>
+                </volist>
+            </ul>
+            <ul class="user_list">
+			   	<volist name = "studentData2" id = "more"  offset="0" length='12' empty = "暂无数据"><!--循环遍历第二个框的姓名，头像-->
+	            	<li>
+	                    <a href="#"><img src="__PUBLIC__/images/{$more['face']}" width="54" height="54" alt=""/></a>
+	                    <span class="user_name">{$more['stuname']}</span>
+	                </li>
+                </volist>
+              
+            </ul>
+            <ul class="user_list">
+				<volist name = "studentData2" id = "more"  offset="0" length='12' empty = "暂无数据"><!--循环遍历第二个框的姓名，头像-->
+	            	<li>
+	                    <a href="#"><img src="__PUBLIC__/images/{$more['face']}" width="54" height="54" alt=""/></a>
+	                    <span class="user_name">{$more['stuname']}</span>
+	                </li>
+	           </volist>
+            </ul>
+           </div>
+        </div>
+           	<a class="pre"></a>
+            <a class="next"></a>
+			<div class="nav">
+				<a class="now"></a>
+				<a ></a>
+				<a ></a>
+			</div>
+        </div>
+    </div>
+</div>
+
+<!--页面的底部-->
+<div class="footer">
+	<div class="my_footer">
+		<ul class="footer_1">
+			<li><a href="#"></a></li>
+			<li><a href="#" id="weixin"><div class="weixin"></div></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="footer_2">
+				<a href="#">关于我们</a>
+				<a href="#">企业合作</a>
+				<a href="#">人才招聘</a>
+				<a href="#">讲师招募</a>
+				<a href="#">联系我们</a>
+				<a href="#">意见反馈</a>
+				<a href="#">友情链接</a>
+		</div>
+		<div class="footer_3">
+			<p>&copy;&nbsp;2016&nbsp;51jiaolianyuan&nbsp;粤ICP备&nbsp;18689008号</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="教练缘，教练，课程">
+	<meta name="description" content="教练缘为你量身订制教练学IT!">
+	<title>教练缘-教练认证</title>
+	<link href="__PUBLIC__/CSS/common.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/CSS/coachProve.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/images/public/logo.ico" rel="icon"/>
+</head>
+
+<body>
+<!--导航栏-->
+<div class="top-warp">
+	<div class="top">
+		<a class="logo" href="__MODULE__/Index/index.html">教练缘，企业人才定制与自学平台</a>
+		<if condition="($name neq '') OR ($phone neq '')">
+		 	<div class="card-warp">
+			 	<img src="__PUBLIC__/images/{$face}" >
+			 	<!--教练头像进入个人中心-->
+			    <if condition="($identity eq 'teacher')">
+			    <p class="card">
+			    	<a class="user"><img src="__PUBLIC__/images/{$face}" ><strong>{$name}</strong></a>
+				 	<a class="personal" href="__MODULE__/Coach/coach.html">个人中心</a>
+		 			<a class="signout" href="__MODULE__/Login/logout">退出</a>
+		 			<i class="card-arrow"></i>
+		 		</p>
+				</if>
+			</div>
+	    </if>  
+	</div>
+</div>
+<!--导航-->
+<div class="nav-warp">
+	<ul class="nav">
+		<li><a href="__MODULE__/Index/index.html" target="_parent">首页</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <if condition="($identity neq '') AND ($identity eq 'teacher')">
+        <li><a href="__MODULE__/Coach/coach.html">个人中心</a></li>
+        </if>
+		<if condition="($identity neq '') AND ($identity eq 'student')">
+		<li><a href="__MODULE__/Student/student.html">自学中心</a></li>
+		</if>
+		<if condition="($identity eq '') OR ($identity neq 'student' AND $identity neq 'teacher')">
+		<li><a href="__MODULE__/Login/login.html" onclick="warn()">自学中心</a></li>
+		</if>
+	</ul>
+</div>
+<div id="prove_mes">
+	<h1><img src="__PUBLIC__/images/coachProve_img/coachProve.png" alt="教练认证图标"/>教练认证</h1>
+    <h2>基本信息：</h2>
+    	<form method="post" action="__URL__/do_coachProve" enctype="multipart/form-data" >
+        	<label for="name">真实姓名 ： </label>
+            <span>
+                <input type="text" id="name" name="name" placeholder="请输入真实姓名..." required/>
+            </span>
+            <label for="phone">联系电话 : </label>
+            <span>
+           		<input type="tel" id="phone" name="phone" placeholder="请输入联系电话..." required/>
+            </span>
+            <label for="email">电子邮箱 : </label>
+            <span>
+           		<input type="email" id="email" name="email" placeholder="请输入电子邮箱..." required/>
+            </span>
+            <label for="IDnumber">身份证号 : </label>
+            <span>
+           		<input type="text" id="IDnumber" name="IDnumber" placeholder="请输入身份证号..." required/>
+            </span>
+            
+              <label for="IDnumber">申请价格 : </label>
+            <span>
+           		<input type="text" id="IDnumber" name="coachPrice" placeholder="定价范围￥:{$priceRange[0]['coachminprice']}-{$priceRange[0]['coachmaxprice']}" required/>
+            </span>
+            
+            <h2>申请信息：</h2>
+            <label for="reason" id="reason">申请理由 : </label>
+            	<p>
+           			<textarea cols="45" rows="8" type="number" id="reason" name="reason" placeholder="请输入您的申请理由..." required></textarea>
+            	</p>
+            
+            <input type="submit" id="submit"value="提交"/>
+            <input type="reset" id="reset" value="重置"/>
+        </form>
+</div>
+<!--页面的底部-->
+<div class="footer">
+	<div class="my_footer">
+		<ul class="footer_1">
+			<li><a href="#"></a></li>
+			<li><a href="#" id="weixin"><div class="weixin"></div></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="footer_2">
+				<a href="#">关于我们</a>
+				<a href="#">企业合作</a>
+				<a href="#">人才招聘</a>
+				<a href="#">讲师招募</a>
+				<a href="#">联系我们</a>
+				<a href="#">意见反馈</a>
+				<a href="#">友情链接</a>
+		</div>
+		<div class="footer_3">
+			<p>&copy;&nbsp;2016&nbsp;51jiaolianyuan&nbsp;粤ICP备&nbsp;18689008号</p>
+		</div>
+	</div>
+</div>
+<script src="__PUBLIC__/js/html5shiv.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+[ 2016-10-08T23:00:06+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:00:19+08:00 ] ::1 /jiaolianyuan/Public/images/student-center-img/student_img.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:00:19+08:00 ] ::1 /jiaolianyuan/Public/images/publiclogo.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:00:31+08:00 ] ::1 /jiaolianyuan/Public/umeditor/php/upload/20161004/14755517174048.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:01:09+08:00 ] ::1 /jiaolianyuan/Public/umeditor/php/upload/20161004/14755517174048.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:01:27+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-10-08T23:03:45+08:00 ] ::1 /jiaolianyuan/Public/images/guide-background/UI%E8%AE%BE%E8%AE%A1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+

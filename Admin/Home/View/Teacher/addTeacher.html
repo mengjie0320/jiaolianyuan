@@ -1,0 +1,259 @@
+﻿       
+    <layout name='layout' />
+	  
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								首页
+							</li>
+
+							<li>
+								用户管理
+							</li>
+							<li><a href="__MODULE__/Teacher/index">教练管理</a></li>
+							<li class="active">添加教练</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+					
+					<script>
+window.onload=function(){
+		
+		//if($('#stuName').length>0){alert('123')}else{alert('456')};
+		 
+		
+		$('#tNo').blur(
+            function() {
+                var tNo = $(this).val();
+                $.post("checkName", {
+                    'tNo' : tNo//前一个username需要跟UserModel对应，即跟数据库字段对应
+                }, function(data) {
+ 
+                        $('#tooltip1').attr('style','color:red');
+                        $('#mess1').html(data);    
+                })
+                return false;
+			  
+            });
+			
+			$('#tName').blur(
+            function() {
+                var tName = $(this).val();
+                if(tName == ""){$('#mess2').html("用户名不能为空！");}
+				else{ 
+					$('#mess2').html("");  
+				} 
+            });
+			$('#address').blur(
+            function() {
+                var address = $(this).val();
+                if(address == ""){$('#mess3').html("地址不能为空！");}
+				else{ 
+					$('#mess3').html("");  
+				} 
+            });
+			$('#phone').blur(
+            function() {
+                var phone = $(this).val();
+                if(phone == ""){$('#mess4').html("电话不能为空！");}
+				else{ 
+					$('#mess4').html("");  
+				} 
+            });
+			$('#regTime').blur(
+            function() {
+                var regTime = $(this).val();
+                if(regTime == ""){$('#mess5').html("注册时间不能为空！");}
+				else{ 
+					$('#mess5').html("");  
+				} 
+            });
+			$('#onlineTime').blur(
+            function() {
+                var onlineTime = $(this).val();
+                if(onlineTime == ""){$('#mess6').html("在线时间不能为空！");}
+				else{ 
+					$('#mess6').html("");  
+				} 
+            });
+			
+			$('#tIntro').blur(
+            function() {
+                var tIntro = $(this).val();
+                if(tIntro == ""){$('#mess7').html("个人简介不能为空！");}
+				else{ 
+					$('#mess7').html("");  
+				} 
+            });
+			
+			$('#submit1').click(function() {  
+				if ($('#tNo').val() == '') {  
+					$('#tooltip1').attr('class', 'tooltip-info visible-inline error');  
+					$('#mess1').html("用户名不能为空!");  
+					return false;
+				}
+				
+				if ($('#mess1').html() == '用户已存在！') {  
+					
+					return false;
+				}
+				
+				var reg = /^\d{4}$/;
+				var str = $('#tNo').val();
+				
+				if (!reg.test(str)) {  
+					$('#mess1').html("用户名不合法,请输4位数字！");  
+					return false;
+				} 
+				
+				if ($('#tName').val() == '') {  
+					$('#mess2').html("姓名不能为空!");  
+					return false;
+				}
+				
+				if ($('#address').val() == '') {  
+					$('#mess3').html("地址不能为空!");  
+					return false;
+				}
+				if ($('#phone').val() == '') {   
+					$('#mess4').html("电话不能为空!");  
+					return false;
+				}
+				
+				
+				var reg2 = /^\d{11}$/;
+				var str2 = $('#phone').val();
+				
+				if (!reg2.test(str2)) {  
+					$('#mess4').html("电话号不合法,请输11位手机号！");  
+					return false;
+				} 
+				
+				if ($('#regTime').val() == '') {  
+					$('#mess5').html("注册时间不能为空!"); 
+					return false;					
+				}
+				
+				if ($('#onlineTime').val() == '') {  
+					$('#mess6').html("注册时间不能为空!"); 
+					return false;					
+				}
+				
+				if ($('#tIntro').val() == '') {  
+					$('#mess7').html("个人简介不能为空!"); 
+					return false;					
+				}
+			});
+}			
+</script>
+					<form action="add" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1">教 练 号：</label>
+						<div class="col-sm-9">
+						<input type="text" name="tNo" id="tNo"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip1" >  
+							<span id="mess1" class="mess"></span>  
+						</div>
+						</div>
+					</div>
+
+				    <div class="space-4"></div>
+						<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">姓　　名：</label>
+						<div class="col-sm-9">
+						<input type="text" name="tName" id="tName"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip2" >  
+							<span id="mess2" class="mess"></span>  
+						</div>
+						</div>
+					</div>
+
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">教练地址：</label>
+						<div class="col-sm-9">
+						<input type="text" name="address" id="address"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip3" >  
+							<span id="mess3" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+	
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">联系电话：</label>
+						<div class="col-sm-9">
+						<input type="text" name="phone" id="phone"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip4" >  
+							<span id="mess4" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+					 
+					<div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">注册时间：</label>
+						<div class="col-sm-9">
+						<input type="date" name="regTime" id="regTime"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip5" >  
+							<span id="mess5" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+					 
+					 
+					 <div class="space-4"></div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">在线时间：</label>
+						<div class="col-sm-9">
+						<input type="text" name="onlineTime" id="onlineTime"  class="col-xs-10 col-sm-5" />
+						<div id="tooltip6" >  
+							<span id="mess6" class="mess"></span>  
+						</div>
+						</div>
+					 </div>
+	
+
+					<div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="myEditor">个人简介：</label>
+						<div class="col-sm-9">
+						<textarea rows="10" cols="53" name="tIntro" id="tIntro" ></textarea>
+						<div id="tooltip7" >  
+							<span id="mess7" class="mess"></span>  
+						</div>
+						</div>
+					</div>
+				  
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<button type="submit" name="c12" id="submit1"  class="btn btn-info"">
+								<i class="icon-ok bigger-110"></i>提交</button>
+							
+								
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+			</div>
+                   
+			
+		

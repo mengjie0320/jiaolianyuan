@@ -1,0 +1,288 @@
+﻿@CHARSET "UTF-8";
+
+/****************reset****************/
+body,h1,h2,h3,h4,h5,h6,p,form,input{
+	margin:0;
+	padding:0;
+}
+b{
+	font-weight:normal;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none; 
+	vertical-align:top;
+}
+
+/****************end reset****************/
+
+/****************login****************/
+body{
+	background:#fff;
+	font-family: "微软雅黑";
+}
+#logo{
+	width:960px;
+	height:80px;
+	margin:0 auto;
+	position:relative;
+}
+#logo img{
+	position:absolute;
+	left:0;
+	top:20px;
+}
+#warp {
+	width:100%;
+	min-width:1200px;
+	height:600px;
+	z-index:1;
+	background:#103754;
+}
+#bg-pic{
+	height:600px;
+	width:988px;
+	margin:0 auto;
+	z-index:2;
+	padding:0px 0 70px 0;
+	background:url(../images/login-reg-img/login_bg_pic.jpg) no-repeat center 80px;
+}
+#login{
+	height:420px;
+	float:right;
+	width:348px;
+	position:relative;
+	top:80px;
+	z-index:3;
+	background:#fff;
+	border:1px solid #e1e1e1;
+	border-radius:10px;
+}
+.login-form h2{
+	height:36px;
+	width:180px;
+	line-height:36px;
+	color: #666;
+	position:relative;
+	top:12px;
+	left:20px;
+	font-weight:normal;
+}
+.login-form a{
+	font-family:"微软雅黑";
+	color:#097BF8;
+	font-size:12px;
+	float:right;
+	position:absolute;
+	top:26px;
+	right:20px;
+}
+.login-form a:hover{
+	text-decoration:underline;
+	color:#55A7FC;
+}
+
+.login-box{
+	width:310px;
+	height:38px;
+	position:relative;
+	top:50px;
+	left:0;
+	border-radius: 5px;
+	margin:0 auto 24px;
+}
+.login:hover{
+	border:1px solid #09F;
+	box-shadow:0 0 6px #09f;
+}
+
+/*登录和密码的图标*/
+#user-pic,#pwd-pic{
+	background:rgba(0,0,0,0) url(../images/login-reg-img/login-icon.png) no-repeat;
+	height:39px;
+	width:38px;
+	border-right:1px solid #e1e1e1;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	position:absolute;
+	top:0px;
+	left:0;
+}
+.login-box:hover #user-pic,.login-box:hover #pwd-pic{
+	 border-right:1px solid #09F;
+	 box-shadow:0px 0px 3px #09F;	 
+ }
+  .login:focus #user-pic{
+	 border-right:1px solid #666;
+ }
+#user-pic{
+	background-position:0 0;
+}
+#pwd-pic{
+	background-position:0 -38px;
+}
+ .login-box:hover #user-pic{
+	 background-position:0 -74px;
+ }
+ .login-box:hover #pwd-pic{
+	 background-position:0 -115px;
+ }
+.login{
+	background:none;
+	outline:none;
+	width:308px;
+	text-indent:48px;
+	padding:12px 0 11px 0px;
+	border-radius:5px;
+	border:1px solid #e1e1e1;
+}
+.login:focus,.codes-box input:focus{
+	background:#e1e1e1;
+}
+/*验证码*/
+.codes-box{
+	width:180px;
+	height: 38px;
+	position:relative;
+	top:60px;
+	left:20px;
+	border-radius:5px;
+}
+.codes-box input{
+	text-indent:8px;
+	width:170px;
+	background: none;
+	padding:11px 0 10px 0px;
+	border-radius:5px;
+	border:1px solid #e1e1e1;
+	outline:none;
+}
+.codes-box input:hover{
+	border:1px solid #09F;
+	box-shadow:0px 0px 6px #09F;
+}
+.codes-img{
+	position: relative;
+	top: 22px;
+	left: 214px;
+	border-radius: 5px;
+	border: 1px solid #e1e1e1;
+	width: 112px;
+	cursor: pointer;
+}
+/*单选框*/
+.checked{
+	position:relative;
+	top:2px;
+	left:0;
+	margin-right: 6px;
+}
+.checked-1,.checked-2{
+	height:25px;
+	line-height:25px;
+	width:70px;
+	color:#666;
+	font-size:14px;
+	display:block;
+	letter-spacing:2px;
+}
+.checked-1{
+	position:absolute;
+	bottom:116px;
+	left:20px;
+}
+.checked-2{
+	position:absolute;
+	bottom:116px;
+	right:20px;
+	text-align: right;
+	
+}
+/*登录按钮*/
+#login-btn{
+	position:absolute;
+	bottom:64px;
+	left:22px;
+	margin:-10px auto;
+	width:300px;
+	height:44px;
+	background: url(../images/login-reg-img/login_bg.gif) no-repeat 0 0;
+	border-radius:6px;
+	cursor:pointer;
+	border:none;
+}
+#login-btn:hover{
+	background-position: -300px 0;
+}
+/*记住我、忘记密码*/
+.safe{
+	position:absolute;
+	font-size:12px;
+	line-height:25px;
+	font-family:"宋体";
+	color:#666;
+	height:25px;
+	width:306px;
+	margin:0 auto;
+	bottom:10px;
+	left:20px;
+}
+.safe a{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	color:#666;
+	float:right;
+}
+.safe a:hover,.foot-ali a:hover{
+	color:#097BF8;
+}
+.safe label{
+	position: absolute;
+	bottom:0px;
+	left: 22px;
+}
+.remember{
+	position:absolute;
+	top:6px;
+	left:4px;
+}
+/*底部*/
+.footer{
+	width:100%;
+	margin:80px auto 0px;
+	border-top:1px double #666;
+	min-width:1200px
+	
+}
+.foot-ali{
+	width:565px;
+	font-size:14px;
+	padding:10px 0 10px 0;
+	margin:-22px  auto;
+	border-radius:2px;
+	background:#e1e1e1;
+	border-bottom:10px solid #fff;
+
+}
+.foot-ali b{
+	color:#333;
+	font-weight:normal;
+	margin:0px;
+	font-size:14px;
+	text-align:center;
+}
+.foot-ali a{
+	color:#666;
+	text-decoration:none;
+	padding:10px 14px;	
+
+}
+.foot-ali a:hover{
+	background:#09F;
+	color:#fff;
+}
+
+/****************end login****************

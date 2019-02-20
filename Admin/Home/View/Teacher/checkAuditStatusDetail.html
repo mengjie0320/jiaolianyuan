@@ -1,0 +1,98 @@
+			<layout name='layout' />
+					
+					<ul class="breadcrumb" style="line-height:50px;">
+							<li>
+								<i class="icon-home home-icon"></i>
+								首页
+							</li>
+
+							<li>
+								用户管理
+							</li>
+							<li><a href="__MODULE__/Teacher/checkAuditStatus">等待认证教练列表</a></li>
+							<li class="active">认证</li>
+							
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+
+				<div class="page-header">
+							
+						</div><!-- /.page-header -->
+			
+				<div  style="margin-left:5px;font-size:20px;">
+					<!--<h3 class="main-heading"><span>Contact info</span></h3>-->
+
+					<ul style=" list-style-type:none;">
+						<foreach name='list' item='vo'>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-user">			</i> 姓　　名:</span>　 {$vo.tname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-barcode">			</i> 教 练 号:</span>　 {$vo.tno}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-star">		</i> 性　　别:</span>　 {$vo.sex}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-envelope">			</i> 年　　龄:</span>　 {$vo.stuname}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-phone">	</i> 联系方式:</span>　 {$vo.phone}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon  glyphicon-flag">	</i> 教练地址:</span>　 {$vo.address}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-dashboard">		</i> 注册时间:</span>　 {$vo.regtime}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-time">		</i> 在线时间:</span>　 {$vo.onlinetime}</li>
+						<li style="padding:10px 10px 50px 10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list-alt">		</i> 个人简介:</span>　 {$vo.tintro}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list-alt">		</i> 申请认证时间:</span>　 {$vo.applytime}</li>
+						<li style="padding:10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list-alt">		</i> 申请任教班级:</span>　 {$vo.classname}</li>
+						<li style="padding:10px 10px 50px 10px;border-bottom:1px solid #F2F2F2;"><span style="font-weight:700;"><i class="glyphicon glyphicon-list-alt">		</i> 申请任教理由:</span>　 {$vo.reason}</li>
+						</foreach>
+					</ul>
+				</div>
+				<div>
+				<form action="updateAuditStatus" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+							<div class="col-sm-9">
+								<input readonly="" type="hidden" class="col-xs-10 col-sm-5" name="id" id="form-input-readonly" value="{$vo.id}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="hidden" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="space-4"></div>
+
+					<div id="status" class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">审核认证：</label>					
+						　
+						  　<input type="radio" name="auditStatus" value="1"/>&nbsp认证通过		　　
+						  　<input type="radio" name="auditStatus" value="2"/>&nbsp认证不通过		　　
+						  　
+							　　
+					   
+					</div>
+					   
+				       
+						<div class="clearfix form-actions">
+							<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info" type="submit">
+									<i class="icon-ok bigger-110"></i>
+									提交
+								</button>
+							
+								
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="icon-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+			</div>		
+						
+						

@@ -1,0 +1,161 @@
+﻿				<layout name='layout' />
+				
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__MODULE__/Work/listW">首页</a>
+							</li>
+
+							<li>
+								<a href="__MODULE__/Work/listW">批阅中心</a>
+							</li>
+							<li>
+								<a href="__MODULE__/Work/listW">已批阅项目列表</a>
+							</li>
+							<li class="active">项目批阅详情</li>
+							
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+	　　　　　　</div><!-- /.page-header -->
+
+		         
+					<div class="col-xs-12" style="margin-top:30px;">
+					<!-- PAGE CONTENT BEGINS -->
+		
+					<foreach name='list' item='vo'>
+					</foreach>
+					<!-- <foreach name='content2' item='vo'>
+					</foreach> -->
+					<form action="evaluate" method="post" class="form-horizontal" role="form">
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">ID：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="id" id="form-input-readonly" value="{$vo.id}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">学生姓名：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="stuName" id="form-input-readonly" value="{$vo.stuname}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">就读班级：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="className" id="form-input-readonly" value="{$vo.classname}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">项目名称：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="name" id="form-input-readonly" value="{$vo.name}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">提交时间：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="submitTime" id="form-input-readonly" value="{$vo.submittime}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+
+					<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly">完成用时：</label>
+
+							<div class="col-sm-9">
+								<input readonly="" type="text" class="col-xs-10 col-sm-5" name="finishedTime" id="form-input-readonly" value="{$vo.finishedtime}" />
+								<span class="help-inline col-xs-12 col-sm-7">
+									<label class="middle">
+										<input class="ace" type="checkbox" id="id-disable-check" />
+									</label>
+								</span>
+							</div>
+					</div>
+					
+				    <div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">评阅内容：</label>
+
+						<div class="col-sm-9">
+						<textarea readonly="" rows="10" cols="43" name="remark" value="{$vo.remark}" >{$vo.remark}</textarea>
+						</div>
+					</div>
+
+					<div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">评阅时间：</label>
+
+						<div class="col-sm-9">
+						<input readonly="" type="date" name="remarkTime" id="form-field-2" class="col-xs-10 col-sm-5" value="{$vo.remarktime}" />
+						</div>
+					</div>
+					
+					<div class="space-4"></div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-2">批阅成绩：</label>					
+						<script>
+						$(document).ready(function(){
+					
+						if($("[name=rank]").val() == ""){$("[name=status]").val("等待批阅")};
+						if($("[name=rank]").val() == "0"){$("[name=status]").val("批阅通过，成绩为A")};
+						if($("[name=rank]").val() == "1"){$("[name=status]").val("批阅通过，成绩为B")};
+						if($("[name=rank]").val() == "2"){$("[name=status]").val("批阅通过，成绩为C")};
+						if($("[name=rank]").val() == "3"){$("[name=status]").val("批阅通过，成绩为D")};
+						if($("[name=rank]").val() == "4"){$("[name=status]").val("批阅不通过，成绩为E")};
+						
+						})
+						</script>
+						  　<input readonly="" type="text" name="status" value=""/>			　　
+						  　<input readonly="" type="hidden" name="rank" value="{$vo.rank}"/>			　　
+						
+					</div>
+					   
+				       
+						
+					</form>
+			</div>

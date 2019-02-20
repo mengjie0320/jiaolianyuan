@@ -1,0 +1,223 @@
+/*支付页面*/
+.center{
+	width: 1200px;
+	height: 208px;
+	margin:60px auto 20px auto;
+	position: relative;
+	background: #f6fafd;
+	border:1px solid #f8f8f8;
+	box-shadow:0px 1px 1px #ccc;
+}
+.center p:first-child{
+	position: absolute;
+	top:-36px;
+	left: 0;
+	font-size: 18px;
+}
+/*班级图*/
+.center>img{
+	margin:18px 0 18px 20px;
+}
+/*班级名*/
+.word_name{
+	position: absolute;
+	top:40px;
+	left: 330px;
+	color:#333;
+	font-size: 20px;
+}
+.word_name strong{
+	color:#22428B;
+}
+.class_price{
+	font-size: 16px;
+	color:#333;
+	position: absolute;
+	right:170px;
+	top:40px;
+}
+.class_price strong{
+	color:red;
+}
+/*支付方式*/
+.pay_way{
+	width: 1200px;
+	height: 171px;
+	margin: 0 auto;
+	position: relative;
+	padding-top:20px;
+	border-top:1px solid #ccc;
+}
+.way_img{
+	width:1140px;
+	height: 90px;
+	padding: 20px 30px;
+	position:relative;
+}
+.way_img form label{
+	position: absolute;
+	top:10px;
+	left:0px;
+	display: block;
+	width:220px;
+	height: 80px;
+	background: #f6fafd;
+	box-shadow:  0 1px 1px #ccc;
+}
+.way_img input{
+	position: absolute;
+	top:30px;
+	left:10px;
+}
+.way_img img{
+	margin-top: 20px;
+	margin-left:30px;
+}
+.way_img span{
+	display: block;
+	position: absolute;
+	top:30px;
+	left:96px;
+}
+
+/*返回继续浏览*/
+.pay_count{
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	border-top:1px solid #ccc;
+}
+.return_scan{
+	display: inline-block;
+	width:120px;
+	height: 70px;
+	line-height: 70px;
+	color:#333;	
+}
+.return_scan:hover{
+	color: #22428B;
+}
+/*去支付*/
+.pay_price{
+	position: absolute;
+	right:120px;
+	top:26px;
+	width:180px;
+	height: 30px;
+	line-height: 30px;
+	color:#333;
+}
+.pay_price strong{
+	color:red;
+}
+/*按钮*/
+.count_btn{
+	display: block;
+	width: 100px;
+	height: 40px;
+	overflow: hidden;
+	position: absolute;
+	right:20px;
+	top:20px;
+}
+.count_btn input{
+	border: none;
+	outline: none;
+	width: 100px ;
+	height: 40px ;
+	line-height: 40px ;
+	background-color: #db1e48;
+	border-radius: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+.count_btn input:hover{
+	background-color: #f60a3e;
+}
+/*模态框*/
+#modal_form{
+    display:none;
+    position:absolute
+    top:24%;
+    left:24%;
+    z-index:100;  
+ }
+ #mask{
+    width: 100%;
+    height: 100%;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:99;
+    background: silver;
+}
+.modal_form{
+	width: 450px;
+	height: 450px;
+	background: #fff;
+	box-shadow: 0 0 2px 2px #22428B;
+	-webkit-box-shadow: 0 0 2px 2px #22428B ;
+	-moz-box-shadow: 0 0 2px 2px #22428B;
+	-o-box-shadow: 0 0 2px 2px #22428B;
+	-ms-box-shadow: 0 0 2px 2px #22428B;
+	border-radius:2px;
+	-ms-border-radius:2px;
+	position: relative;
+}
+.modal_form p{
+	font-size:1.2em;
+	margin: 0px 20px;
+	font-weight: bold;
+	color:#fff;
+}
+.modal_form .modal_word{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background:#22428B ;
+}
+.modal_form .qrcode{
+	width: 258px;
+	height: 300px;
+	margin: 0 auto;
+}
+.modal_form .qrcode p{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 24px;
+}
+.modal_form .qrcode  img{
+	margin-left:34px;
+	margin-top:10px;
+}
+.modal_form .qrcode .button{
+	position: absolute;
+	bottom:100px;
+	right:170px;
+	background: #db1e48;
+	padding:10px 20px;
+	color:#fff;
+	text-align: center;
+	border-radius: 6px;
+	font-size: 16px;
+}
+.modal_form .qrcode .button:hover{
+	background: #f11f4e;
+}
+/*关闭按钮*/
+.close_btn a{
+	display: block;
+	height: 30px;
+	width:30px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	background: url(../images/student/pay_icon.png) no-repeat 0 -100px;
+}
+.close_btn a:hover{
+	background: url(../images/student/pay_icon.png) no-repeat  0 -130px;
+}

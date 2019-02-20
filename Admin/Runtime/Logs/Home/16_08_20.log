@@ -1,0 +1,1541 @@
+[ 2016-08-20T10:38:05+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.011001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T10:38:10+08:00 ] ::1 /admin.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1770s ]
+SQL: SELECT * FROM `admin` WHERE `adminName` = 'admin' AND `password` = 'admin'  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.221013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T10:48:24+08:00 ] ::1 /admin.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `admin` WHERE `adminName` = 'admin' AND `password` = 'admin'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-08-20T10:50:15+08:00 ] ::1 /admin.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `admin` WHERE `adminName` = 'admin' AND `password` = 'admin'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-08-20T10:50:26+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 1054:Champ 'a.submitTime' inconnu dans field list
+ [ SQL语句 ] : select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id
+ERR: 1054:Champ 'a.submitTime' inconnu dans field list
+ [ SQL语句 ] : select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id
+
+[ 2016-08-20T10:51:26+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T10:53:10+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0800s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: finishedTime E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 619 行.
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 644 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-08-20T11:02:00+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: finishedTime E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 620 行.
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-08-20T11:02:21+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: finishedTime E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 620 行.
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-08-20T11:02:26+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cate E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 571 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 578 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 591 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T11:04:05+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cno E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 591 行.
+NOTIC: [8] Undefined index: cname E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 606 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014000s ]
+
+[ 2016-08-20T11:06:11+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cname E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 595 行.
+NOTIC: [8] Undefined index: cname E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined index: cname E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 615 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-08-20T11:11:12+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.039002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040002s ]
+
+[ 2016-08-20T11:11:53+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-08-20T11:12:01+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.011000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013001s ]
+
+[ 2016-08-20T11:12:41+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-08-20T11:12:55+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-08-20T11:13:03+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.034002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.034002s ]
+
+[ 2016-08-20T11:20:35+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0020s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: remarktime E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 605 行.
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 614 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T11:21:19+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: finishedTime E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 620 行.
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2016-08-20T11:21:22+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 615 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T11:27:08+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-08-20T11:27:09+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cate_list E:\wamp\www\Admin\Runtime\Cache\Home\560a0dfb16ce6cf6a7b01e1f3bd58b7f.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-08-20T11:29:06+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-08-20T11:29:25+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0020s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-08-20T11:29:41+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-08-20T16:44:20+08:00 ] ::1 /admin.php/Home/Work/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:update
+
+[ 2016-08-20T16:44:48+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T16:45:01+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0170s ]
+SQL: UPDATE `work` SET `remark`='通天塔',`remarkTime`='2016-08-20 16:45:01',`status`='审核通过' WHERE ( id = 1 ) [ RunTime:0.0740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T16:45:03+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-08-20T16:45:14+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0030s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.076005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.076005s ]
+
+[ 2016-08-20T16:45:19+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0150s ]
+SQL: UPDATE `work` SET `remark`='',`remarkTime`='2016-08-20 16:45:19',`status`='' WHERE ( id = 1 ) [ RunTime:0.0900s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-08-20T16:45:20+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012000s ]
+
+[ 2016-08-20T16:47:17+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T16:47:18+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-08-20T16:47:26+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-08-20T16:47:28+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011000s ]
+
+[ 2016-08-20T16:47:34+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0150s ]
+SQL: UPDATE `work` SET `remark`='阿萨德',`remarkTime`='2016-08-20 16:47:34',`status`='审核通过' WHERE ( id = 1 ) [ RunTime:0.0850s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T16:47:36+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-08-20T16:50:48+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 658 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-08-20T16:50:49+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-08-20T16:51:09+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018001s ]
+
+[ 2016-08-20T16:52:46+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-08-20T16:54:24+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 660 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T16:58:36+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 660 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T16:58:37+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: content E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 571 行.
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 579 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 592 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 605 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 618 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 631 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 644 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 659 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 669 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-08-20T16:58:50+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 571 行.
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 579 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 592 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 605 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 618 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 631 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 644 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 659 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 669 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-08-20T16:59:03+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 571 行.
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 579 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 592 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 605 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 618 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 631 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 644 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 659 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 669 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-08-20T16:59:40+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: content E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 571 行.
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 579 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 592 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 605 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 618 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 631 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 644 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 659 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 669 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2016-08-20T16:59:53+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 660 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-08-20T16:59:55+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 571 行.
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 579 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 592 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 605 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 618 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 631 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 644 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 659 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 669 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+NOTIC: [8] Undefined variable: vo E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 678 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-08-20T17:00:22+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011000s ]
+
+[ 2016-08-20T17:00:49+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013001s ]
+
+[ 2016-08-20T17:00:59+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-08-20T17:01:59+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-08-20T17:02:07+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.138008s ]
+
+[ 2016-08-20T17:02:32+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-08-20T17:02:47+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2016-08-20T17:03:03+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2016-08-20T17:03:18+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0140s ]
+SQL: UPDATE `work` SET `remark`='也一样',`remarkTime`='2016-08-20 17:03:18',`status`='审核通过' WHERE ( id = 1 ) [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T17:03:19+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 660 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2016-08-20T17:03:22+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-08-20T17:03:31+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-08-20T17:03:33+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.108007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.108007s ]
+
+[ 2016-08-20T17:03:43+08:00 ] ::1 /admin.php/Home/Work/prepareForEvaluate?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: select id, remark, status from work where id = 1 [ RunTime:0.0010s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014000s ]
+
+[ 2016-08-20T17:03:53+08:00 ] ::1 /admin.php/Home/Work/evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `work` [ RunTime:0.0170s ]
+SQL: UPDATE `work` SET `remark`='也一样啊啊',`remarkTime`='2016-08-20 17:03:52',`status`='' WHERE ( id = 1 ) [ RunTime:0.0910s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-08-20T17:03:54+08:00 ] ::1 /admin.php/Home/Work/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: show E:\wamp\www\Admin\Runtime\Cache\Home\c251c9313209df2fbaee1021f32ed92e.php 第 660 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-08-20T17:03:57+08:00 ] ::1 /admin.php/Home/Work/detail?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: select a.id, b.stuName, d.className, e.name, a.submitTime, a.finishedTime, a.workUrl, a.remark, a.remarkTime, a.status from work as a left join student as b on a.stuId = b.id left join stu_class as c on a.stuId = c.stuId and graduateStatus = '未毕业' left join class as d on c.classId = d.id left join project as e on a.projectId = e.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: content2 E:\wamp\www\Admin\Runtime\Cache\Home\632af0ead483c13de97bc536fecc6532.php 第 572 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
